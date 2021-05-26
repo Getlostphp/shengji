@@ -7,13 +7,20 @@ use app\admin\model\AuthGroupAccess;
 use app\common\controller\Backend;
 use fast\Random;
 use fast\Tree;
+<<<<<<< HEAD
 use think\Db;
+=======
+>>>>>>> fastadmin/master
 use think\Validate;
 
 /**
  * 管理员管理
  *
+<<<<<<< HEAD
  * @icon   fa fa-users
+=======
+ * @icon fa fa-users
+>>>>>>> fastadmin/master
  * @remark 一个管理员可以有多个角色组,左侧的菜单根据管理员所拥有的权限进行生成
  */
 class Admin extends Backend
@@ -33,8 +40,13 @@ class Admin extends Backend
         parent::_initialize();
         $this->model = model('Admin');
 
+<<<<<<< HEAD
         $this->childrenAdminIds = $this->auth->getChildrenAdminIds($this->auth->isSuperAdmin());
         $this->childrenGroupIds = $this->auth->getChildrenGroupIds($this->auth->isSuperAdmin());
+=======
+        $this->childrenAdminIds = $this->auth->getChildrenAdminIds(true);
+        $this->childrenGroupIds = $this->auth->getChildrenGroupIds(true);
+>>>>>>> fastadmin/master
 
         $groupList = collection(AuthGroup::where('id', 'in', $this->childrenGroupIds)->select())->toArray();
 
@@ -123,6 +135,7 @@ class Admin extends Backend
             $this->token();
             $params = $this->request->post("row/a");
             if ($params) {
+<<<<<<< HEAD
                 Db::startTrans();
                 try {
                     if (!Validate::is($params['password'], '\S{6,16}')) {
@@ -156,6 +169,30 @@ class Admin extends Backend
                 $this->success();
             }
             $this->error(__('Parameter %s can not be empty', ''));
+=======
+                if (!Validate::is($params['password'], '\S{6,16}')) {
+                    $this->error(__("Please input correct password"));
+                }
+                $params['salt'] = Random::alnum();
+                $params['password'] = md5(md5($params['password']) . $params['salt']);
+                $params['avatar'] = '/assets/img/avatar.png'; //设置新管理员默认头像。
+                $result = $this->model->validate('Admin.add')->save($params);
+                if ($result === false) {
+                    $this->error($this->model->getError());
+                }
+                $group = $this->request->post("group/a");
+
+                //过滤不允许的组别,避免越权
+                $group = array_intersect($this->childrenGroupIds, $group);
+                $dataset = [];
+                foreach ($group as $value) {
+                    $dataset[] = ['uid' => $this->model->id, 'group_id' => $value];
+                }
+                model('AuthGroupAccess')->saveAll($dataset);
+                $this->success();
+            }
+            $this->error();
+>>>>>>> fastadmin/master
         }
         return $this->view->fetch();
     }
@@ -176,6 +213,7 @@ class Admin extends Backend
             $this->token();
             $params = $this->request->post("row/a");
             if ($params) {
+<<<<<<< HEAD
                 Db::startTrans();
                 try {
                     if ($params['password']) {
@@ -223,6 +261,45 @@ class Admin extends Backend
                 $this->success();
             }
             $this->error(__('Parameter %s can not be empty', ''));
+=======
+                if ($params['password']) {
+                    if (!Validate::is($params['password'], '\S{6,16}')) {
+                        $this->error(__("Please input correct password"));
+                    }
+                    $params['salt'] = Random::alnum();
+                    $params['password'] = md5(md5($params['password']) . $params['salt']);
+                } else {
+                    unset($params['password'], $params['salt']);
+                }
+                //这里需要针对username和email做唯一验证
+                $adminValidate = \think\Loader::validate('Admin');
+                $adminValidate->rule([
+                    'username' => 'require|regex:\w{3,12}|unique:admin,username,' . $row->id,
+                    'email'    => 'require|email|unique:admin,email,' . $row->id,
+                    'password' => 'regex:\S{32}',
+                ]);
+                $result = $row->validate('Admin.edit')->save($params);
+                if ($result === false) {
+                    $this->error($row->getError());
+                }
+
+                // 先移除所有权限
+                model('AuthGroupAccess')->where('uid', $row->id)->delete();
+
+                $group = $this->request->post("group/a");
+
+                // 过滤不允许的组别,避免越权
+                $group = array_intersect($this->childrenGroupIds, $group);
+
+                $dataset = [];
+                foreach ($group as $value) {
+                    $dataset[] = ['uid' => $row->id, 'group_id' => $value];
+                }
+                model('AuthGroupAccess')->saveAll($dataset);
+                $this->success();
+            }
+            $this->error();
+>>>>>>> fastadmin/master
         }
         $grouplist = $this->auth->getGroups($row['id']);
         $groupids = [];
@@ -257,6 +334,7 @@ class Admin extends Backend
                 }
                 $deleteIds = array_values(array_diff($deleteIds, [$this->auth->id]));
                 if ($deleteIds) {
+<<<<<<< HEAD
                     Db::startTrans();
                     try {
                         $this->model->destroy($deleteIds);
@@ -269,6 +347,12 @@ class Admin extends Backend
                     $this->success();
                 }
                 $this->error(__('No rows were deleted'));
+=======
+                    $this->model->destroy($deleteIds);
+                    model('AuthGroupAccess')->where('uid', 'in', $deleteIds)->delete();
+                    $this->success();
+                }
+>>>>>>> fastadmin/master
             }
         }
         $this->error(__('You have no permission'));

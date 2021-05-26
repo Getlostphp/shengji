@@ -27,8 +27,13 @@ class Validate extends Api
      */
     public function check_email_available()
     {
+<<<<<<< HEAD
         $email = $this->request->post('email');
         $id = (int)$this->request->post('id');
+=======
+        $email = $this->request->request('email');
+        $id = (int)$this->request->request('id');
+>>>>>>> fastadmin/master
         $count = User::where('email', '=', $email)->where('id', '<>', $id)->count();
         if ($count > 0) {
             $this->error(__('邮箱已经被占用'));
@@ -44,9 +49,15 @@ class Validate extends Api
      */
     public function check_username_available()
     {
+<<<<<<< HEAD
         $username = $this->request->post('username');
         $id = (int)$this->request->post('id');
         $count = User::where('username', '=', $username)->where('id', '<>', $id)->count();
+=======
+        $email = $this->request->request('username');
+        $id = (int)$this->request->request('id');
+        $count = User::where('username', '=', $email)->where('id', '<>', $id)->count();
+>>>>>>> fastadmin/master
         if ($count > 0) {
             $this->error(__('用户名已经被占用'));
         }
@@ -61,9 +72,15 @@ class Validate extends Api
      */
     public function check_nickname_available()
     {
+<<<<<<< HEAD
         $nickname = $this->request->post('nickname');
         $id = (int)$this->request->post('id');
         $count = User::where('nickname', '=', $nickname)->where('id', '<>', $id)->count();
+=======
+        $email = $this->request->request('nickname');
+        $id = (int)$this->request->request('id');
+        $count = User::where('nickname', '=', $email)->where('id', '<>', $id)->count();
+>>>>>>> fastadmin/master
         if ($count > 0) {
             $this->error(__('昵称已经被占用'));
         }
@@ -78,8 +95,13 @@ class Validate extends Api
      */
     public function check_mobile_available()
     {
+<<<<<<< HEAD
         $mobile = $this->request->post('mobile');
         $id = (int)$this->request->post('id');
+=======
+        $mobile = $this->request->request('mobile');
+        $id = (int)$this->request->request('id');
+>>>>>>> fastadmin/master
         $count = User::where('mobile', '=', $mobile)->where('id', '<>', $id)->count();
         if ($count > 0) {
             $this->error(__('该手机号已经占用'));
@@ -94,7 +116,11 @@ class Validate extends Api
      */
     public function check_mobile_exist()
     {
+<<<<<<< HEAD
         $mobile = $this->request->post('mobile');
+=======
+        $mobile = $this->request->request('mobile');
+>>>>>>> fastadmin/master
         $count = User::where('mobile', '=', $mobile)->count();
         if (!$count) {
             $this->error(__('手机号不存在'));
@@ -109,7 +135,11 @@ class Validate extends Api
      */
     public function check_email_exist()
     {
+<<<<<<< HEAD
         $email = $this->request->post('email');
+=======
+        $email = $this->request->request('email');
+>>>>>>> fastadmin/master
         $count = User::where('email', '=', $email)->count();
         if (!$count) {
             $this->error(__('邮箱不存在'));
@@ -126,9 +156,15 @@ class Validate extends Api
      */
     public function check_sms_correct()
     {
+<<<<<<< HEAD
         $mobile = $this->request->post('mobile');
         $captcha = $this->request->post('captcha');
         $event = $this->request->post('event');
+=======
+        $mobile = $this->request->request('mobile');
+        $captcha = $this->request->request('captcha');
+        $event = $this->request->request('event');
+>>>>>>> fastadmin/master
         if (!\app\common\library\Sms::check($mobile, $captcha, $event)) {
             $this->error(__('验证码不正确'));
         }
@@ -144,9 +180,15 @@ class Validate extends Api
      */
     public function check_ems_correct()
     {
+<<<<<<< HEAD
         $email = $this->request->post('email');
         $captcha = $this->request->post('captcha');
         $event = $this->request->post('event');
+=======
+        $email = $this->request->request('email');
+        $captcha = $this->request->request('captcha');
+        $event = $this->request->request('event');
+>>>>>>> fastadmin/master
         if (!\app\common\library\Ems::check($email, $captcha, $event)) {
             $this->error(__('验证码不正确'));
         }

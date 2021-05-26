@@ -13,6 +13,14 @@
 // 定义应用目录
 define('APP_PATH', __DIR__ . '/../application/');
 
+<<<<<<< HEAD
+=======
+// 判断是否安装
+if (!is_file(APP_PATH . 'admin/command/Install/install.lock')) {
+    header("location:./install.php");
+    exit;
+}
+>>>>>>> fastadmin/master
 
 // 加载框架引导文件
 require __DIR__ . '/../thinkphp/start.php';

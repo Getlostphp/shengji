@@ -21,7 +21,11 @@ return [
     /**
      * 可上传的文件类型
      */
+<<<<<<< HEAD
     'mimetype'  => 'jpg,png,bmp,jpeg,gif,zip,rar,xls,xlsx,wav,mp4,mp3,pdf',
+=======
+    'mimetype'  => 'jpg,png,bmp,jpeg,gif,zip,rar,xls,xlsx',
+>>>>>>> fastadmin/master
     /**
      * 是否支持批量上传
      */

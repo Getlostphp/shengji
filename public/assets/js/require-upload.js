@@ -141,7 +141,11 @@ define(['jquery', 'bootstrap', 'dropzone', 'template'], function ($, undefined, 
                         //上传URL
                         url = url ? url : Config.upload.uploadurl;
                         url = Fast.api.fixurl(url);
+<<<<<<< HEAD
                         var chunking = false, chunkSize = Config.upload.chunksize || 2097152, timeout = Config.upload.timeout || 600000;
+=======
+                        var chunking = false, chunkSize = Config.upload.chunksize || 2097152;
+>>>>>>> fastadmin/master
 
                         //最大可上传文件大小
                         maxsize = typeof maxsize !== "undefined" ? maxsize : Config.upload.maxsize;
@@ -198,8 +202,11 @@ define(['jquery', 'bootstrap', 'dropzone', 'template'], function ($, undefined, 
                             maxFilesize: maxFilesize,
                             acceptedFiles: mimetype,
                             maxFiles: (maxcount && parseInt(maxcount) > 1 ? maxcount : (multiple ? null : 1)),
+<<<<<<< HEAD
                             timeout: timeout,
                             parallelUploads: 1,
+=======
+>>>>>>> fastadmin/master
                             previewsContainer: false,
                             dictDefaultMessage: __("Drop files here to upload"),
                             dictFallbackMessage: __("Your browser does not support drag'n'drop file uploads"),
@@ -245,7 +252,11 @@ define(['jquery', 'bootstrap', 'dropzone', 'template'], function ($, undefined, 
                                 }
                             },
                             error: function (file, response, xhr) {
+<<<<<<< HEAD
                                 var responseObj = $("<div>" + (xhr && typeof xhr.responseText !== 'undefined' ? xhr.responseText : response) + "</div>");
+=======
+                                var responseObj = $("<div>" + xhr.responseText + "</div>");
+>>>>>>> fastadmin/master
                                 responseObj.find("style, title, script").remove();
                                 var ret = {code: 0, data: null, msg: responseObj.text()};
                                 Upload.events.onUploadError(this, ret, file);
@@ -345,12 +356,19 @@ define(['jquery', 'bootstrap', 'dropzone', 'template'], function ($, undefined, 
                                     }
                                     var suffix = /[\.]?([a-zA-Z0-9]+)$/.exec(j);
                                     suffix = suffix ? suffix[1] : 'file';
+<<<<<<< HEAD
                                     var value = (json && typeof json[i] !== 'undefined' ? json[i] : null);
                                     var data = {url: j, fullurl: Fast.api.cdnurl(j), data: $(that).data(), key: i, index: i, value: value, row: value, suffix: suffix};
                                     var html = tpl ? Template(tpl, data) : Template.render(Upload.config.previewtpl, data);
                                     $("#" + preview_id).append(html);
                                 });
                                 refresh($("#" + preview_id).data("name"));
+=======
+                                    var data = {url: j, fullurl: Fast.api.cdnurl(j), data: $(that).data(), key: i, index: i, value: (json && typeof json[i] !== 'undefined' ? json[i] : null), suffix: suffix};
+                                    var html = tpl ? Template(tpl, data) : Template.render(Upload.config.previewtpl, data);
+                                    $("#" + preview_id).append(html);
+                                });
+>>>>>>> fastadmin/master
                             });
                             $("#" + input_id).trigger("change");
                         }

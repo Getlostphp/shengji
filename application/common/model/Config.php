@@ -183,7 +183,10 @@ class Config extends Model
             'mimetype'  => $uploadcfg['mimetype'],
             'chunking'  => $uploadcfg['chunking'],
             'chunksize' => $uploadcfg['chunksize'],
+<<<<<<< HEAD
             'savekey'   => $uploadcfg['savekey'],
+=======
+>>>>>>> fastadmin/master
             'multipart' => [],
             'multiple'  => $uploadcfg['multiple'],
             'storage'   => 'local'
@@ -191,6 +194,7 @@ class Config extends Model
         return $upload;
     }
 
+<<<<<<< HEAD
     /**
      * 刷新配置文件
      */
@@ -219,4 +223,6 @@ class Config extends Model
         return true;
     }
 
+=======
+>>>>>>> fastadmin/master
 }

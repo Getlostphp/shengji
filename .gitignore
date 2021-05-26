@@ -15,4 +15,7 @@ composer.lock
 .env
 .svn
 .vscode
+<<<<<<< HEAD
 node_modules
+=======
+>>>>>>> fastadmin/master

@@ -24,6 +24,7 @@
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
 
+<<<<<<< HEAD
                 <li class="hidden-xs">
                     <a href="__PUBLIC__" target="_blank"><i class="fa fa-home" style="font-size:14px;"></i> {:__('Home')}</a>
                 </li>
@@ -42,6 +43,23 @@
                         <li><a href="javascript:;" data-type="browser"><i class="fa fa-chrome fa-fw"></i> {:__('Wipe browser cache')}
                             <span data-toggle="tooltip" data-title="{:__('Wipe browser cache tips')}"><i class="fa fa-info-circle"></i></span>
                         </a></li>
+=======
+                <li>
+                    <a href="__PUBLIC__" target="_blank"><i class="fa fa-home" style="font-size:14px;"></i></a>
+                </li>
+
+                <!-- 清除缓存 -->
+                <li>
+                    <a href="javascript:;" data-toggle="dropdown" title="{:__('Wipe cache')}">
+                        <i class="fa fa-trash"></i>
+                    </a>
+                    <ul class="dropdown-menu wipecache">
+                        <li><a href="javascript:;" data-type="all"><i class="fa fa-trash"></i> {:__('Wipe all cache')}</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;" data-type="content"><i class="fa fa-file-text"></i> {:__('Wipe content cache')}</a></li>
+                        <li><a href="javascript:;" data-type="template"><i class="fa fa-file-image-o"></i> {:__('Wipe template cache')}</a></li>
+                        <li><a href="javascript:;" data-type="addons"><i class="fa fa-rocket"></i> {:__('Wipe addons cache')}</a></li>
+>>>>>>> fastadmin/master
                     </ul>
                 </li>
 
@@ -81,6 +99,7 @@
                                 <small>{$admin.logintime|date="Y-m-d H:i:s",###}</small>
                             </p>
                         </li>
+<<<<<<< HEAD
                         <li class="user-body">
                             <div class="visible-xs">
                                 <div class="pull-left">
@@ -91,6 +110,8 @@
                                 </div>
                             </div>
                         </li>
+=======
+>>>>>>> fastadmin/master
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">

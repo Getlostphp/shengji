@@ -180,6 +180,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'template'], function
                     Toastr.success(ret.msg);
                     operate(data.addon.name, 'enable', false);
                     return false;
+<<<<<<< HEAD
                 }, function (data, ret) {
                     if (ret.msg && ret.msg.match(/(login|登录)/g)) {
                         return Layer.alert(ret.msg, {
@@ -201,6 +202,8 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'template'], function
                         $(".btn-userinfo").trigger("click");
                         return false;
                     }
+=======
+>>>>>>> fastadmin/master
                 });
             });
 
@@ -251,7 +254,11 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'template'], function
             });
 
             // 会员信息
+<<<<<<< HEAD
             $(document).on("click", ".btn-userinfo", function (e, name, version) {
+=======
+            $(document).on("click", ".btn-userinfo", function () {
+>>>>>>> fastadmin/master
                 var that = this;
                 var area = [$(window).width() > 800 ? '500px' : '95%', $(window).height() > 600 ? '400px' : '95%'];
                 var userinfo = Controller.api.userinfo.get();
@@ -283,6 +290,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'template'], function
                             return false;
                         },
                         success: function (layero, index) {
+<<<<<<< HEAD
                             this.checkEnterKey = function (event) {
                                 if (event.keyCode === 13) {
                                     $(".layui-layer-btn0").trigger("click");
@@ -294,6 +302,9 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'template'], function
                         },
                         end: function () {
                             $(document).off('keydown', this.checkEnterKey);
+=======
+                            $(".layui-layer-btn1", layero).prop("href", "http://www.fastadmin.net/user/register.html").prop("target", "_blank");
+>>>>>>> fastadmin/master
                         }
                     });
                 } else {
@@ -509,7 +520,11 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'template'], function
                         title: __('Warning'),
                         btn: [__('Login now')],
                         yes: function (index, layero) {
+<<<<<<< HEAD
                             $(".btn-userinfo").trigger("click", name, version);
+=======
+                            $(".btn-userinfo").trigger("click");
+>>>>>>> fastadmin/master
                         },
                         btn2: function () {
                             install(name, version, false);

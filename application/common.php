@@ -33,16 +33,26 @@ if (!function_exists('format_bytes')) {
      * 将字节转换为可读文本
      * @param int    $size      大小
      * @param string $delimiter 分隔符
+<<<<<<< HEAD
      * @param int    $precision 小数位数
      * @return string
      */
     function format_bytes($size, $delimiter = '', $precision = 2)
+=======
+     * @return string
+     */
+    function format_bytes($size, $delimiter = '')
+>>>>>>> fastadmin/master
     {
         $units = array('B', 'KB', 'MB', 'GB', 'TB', 'PB');
         for ($i = 0; $size >= 1024 && $i < 6; $i++) {
             $size /= 1024;
         }
+<<<<<<< HEAD
         return round($size, $precision) . $delimiter . $units[$i];
+=======
+        return round($size, 2) . $delimiter . $units[$i];
+>>>>>>> fastadmin/master
     }
 }
 
@@ -86,8 +96,12 @@ if (!function_exists('cdnurl')) {
     function cdnurl($url, $domain = false)
     {
         $regex = "/^((?:[a-z]+:)?\/\/|data:image\/)(.*)/i";
+<<<<<<< HEAD
         $cdnurl = \think\Config::get('upload.cdnurl');
         $url = preg_match($regex, $url) || ($cdnurl && stripos($url, $cdnurl) === 0) ? $url : $cdnurl . $url;
+=======
+        $url = preg_match($regex, $url) ? $url : \think\Config::get('upload.cdnurl') . $url;
+>>>>>>> fastadmin/master
         if ($domain && !preg_match($regex, $url)) {
             $domain = is_bool($domain) ? request()->domain() : $domain;
             $url = $domain . $url;
@@ -248,7 +262,11 @@ if (!function_exists('addtion')) {
                 $model = $v['name'] ? \think\Db::name($v['name']) : \think\Db::table($v['table']);
             }
             $primary = $v['primary'] ? $v['primary'] : $model->getPk();
+<<<<<<< HEAD
             $result[$v['field']] = isset($ids[$v['field']]) ? $model->where($primary, 'in', $ids[$v['field']])->column("{$primary},{$v['column']}") : [];
+=======
+            $result[$v['field']] = $model->where($primary, 'in', $ids[$v['field']])->column("{$primary},{$v['column']}");
+>>>>>>> fastadmin/master
         }
 
         foreach ($items as $k => &$v) {
@@ -267,6 +285,7 @@ if (!function_exists('addtion')) {
 if (!function_exists('var_export_short')) {
 
     /**
+<<<<<<< HEAD
      * 使用短标签打印或返回数组结构
      * @param mixed   $data
      * @param boolean $return 是否返回数据
@@ -329,6 +348,15 @@ if (!function_exists('var_export_short')) {
         } else {
             echo $dump;
         }
+=======
+     * 返回打印数组结构
+     * @param string $var 数组
+     * @return string
+     */
+    function var_export_short($var)
+    {
+        return VarExporter::export($var);
+>>>>>>> fastadmin/master
     }
 }
 
@@ -347,7 +375,11 @@ if (!function_exists('letter_avatar')) {
         $bg = "rgb({$r},{$g},{$b})";
         $color = "#ffffff";
         $first = mb_strtoupper(mb_substr($text, 0, 1));
+<<<<<<< HEAD
         $src = base64_encode('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="100" width="100"><rect fill="' . $bg . '" x="0" y="0" width="100" height="100"></rect><text x="50" y="50" font-size="50" text-copy="fast" fill="' . $color . '" text-anchor="middle" text-rights="admin" dominant-baseline="central">' . $first . '</text></svg>');
+=======
+        $src = base64_encode('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="100" width="100"><rect fill="' . $bg . '" x="0" y="0" width="100" height="100"></rect><text x="50" y="50" font-size="50" text-copy="fast" fill="' . $color . '" text-anchor="middle" text-rights="admin" alignment-baseline="central">' . $first . '</text></svg>');
+>>>>>>> fastadmin/master
         $value = 'data:image/svg+xml;base64,' . $src;
         return $value;
     }
@@ -460,6 +492,7 @@ if (!function_exists('xss_clean')) {
         return \app\common\library\Security::instance()->xss_clean($content, $is_image);
     }
 }
+<<<<<<< HEAD
 
 if (!function_exists('check_ip_allowed')) {
     /**
@@ -478,3 +511,5 @@ if (!function_exists('check_ip_allowed')) {
         }
     }
 }
+=======
+>>>>>>> fastadmin/master

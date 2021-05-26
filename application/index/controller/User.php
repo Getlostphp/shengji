@@ -65,7 +65,11 @@ class User extends Frontend
      */
     public function register()
     {
+<<<<<<< HEAD
         $url = $this->request->request('url', '', 'trim');
+=======
+        $url = $this->request->request('url', '');
+>>>>>>> fastadmin/master
         if ($this->auth->id) {
             $this->success(__('You\'ve logged in, do not login again'), $url ? $url : url('user/index'));
         }
@@ -144,7 +148,11 @@ class User extends Frontend
      */
     public function login()
     {
+<<<<<<< HEAD
         $url = $this->request->request('url', '', 'trim');
+=======
+        $url = $this->request->request('url', '');
+>>>>>>> fastadmin/master
         if ($this->auth->id) {
             $this->success(__('You\'ve logged in, do not login again'), $url ? $url : url('user/index'));
         }
@@ -267,7 +275,10 @@ class User extends Frontend
         $this->request->filter(['strip_tags']);
         if ($this->request->isAjax()) {
             $mimetypeQuery = [];
+<<<<<<< HEAD
             $where = [];
+=======
+>>>>>>> fastadmin/master
             $filter = $this->request->request('filter');
             $filterArr = (array)json_decode($filter, true);
             if (isset($filterArr['mimetype']) && preg_match("/[]\,|\*]/", $filterArr['mimetype'])) {
@@ -282,6 +293,7 @@ class User extends Frontend
                         }
                     }
                 };
+<<<<<<< HEAD
             } elseif (isset($filterArr['mimetype'])) {
                 $where['mimetype'] = ['like', '%' . $filterArr['mimetype'] . '%'];
             }
@@ -295,18 +307,27 @@ class User extends Frontend
                 $where['createtime'] = ['between', [strtotime($timeArr[0]), strtotime($timeArr[1])]];
             }
 
+=======
+            }
+>>>>>>> fastadmin/master
             $model = new Attachment();
             $offset = $this->request->get("offset", 0);
             $limit = $this->request->get("limit", 0);
             $total = $model
+<<<<<<< HEAD
                 ->where($where)
+=======
+>>>>>>> fastadmin/master
                 ->where($mimetypeQuery)
                 ->where('user_id', $this->auth->id)
                 ->order("id", "DESC")
                 ->count();
 
             $list = $model
+<<<<<<< HEAD
                 ->where($where)
+=======
+>>>>>>> fastadmin/master
                 ->where($mimetypeQuery)
                 ->where('user_id', $this->auth->id)
                 ->order("id", "DESC")

@@ -27,12 +27,20 @@
                 font-family: "Roboto", "SF Pro SC", "SF Pro Display", "SF Pro Icons", "PingFang SC", BlinkMacSystemFont, -apple-system, "Segoe UI", "Microsoft Yahei", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
                 font-weight: 400;
             }
+<<<<<<< HEAD
             h2        { font-size: 1.2em; }
+=======
+            h2        { font-size: 1.6em; }
+>>>>>>> fastadmin/master
             hr        { margin-top: 10px; }
             .tab-pane { padding-top: 10px; }
             .mt0      { margin-top: 0px; }
             .footer   { font-size: 12px; color: #666; }
+<<<<<<< HEAD
             .docs-list .label    { display: inline-block; min-width: 65px; padding: 0.3em 0.6em 0.3em; }
+=======
+            .label    { display: inline-block; min-width: 65px; padding: 0.3em 0.6em 0.3em; }
+>>>>>>> fastadmin/master
             .string   { color: green; }
             .number   { color: darkorange; }
             .boolean  { color: blue; }
@@ -65,6 +73,7 @@
             #sidebar > .list-group > a{
                 text-indent:0;
             }
+<<<<<<< HEAD
             #sidebar .child > a .tag{
                 position: absolute;
                 right: 10px;
@@ -73,16 +82,23 @@
             #sidebar .child > a .pull-right{
                 margin-left:3px;
             }
+=======
+>>>>>>> fastadmin/master
             #sidebar .child {
                 border:1px solid #ddd;
                 border-bottom:none;
             }
+<<<<<<< HEAD
             #sidebar .child:last-child {
                 border-bottom:1px solid #ddd;
             }
             #sidebar .child > a {
                 border:0;
                 min-height: 40px;
+=======
+            #sidebar .child > a {
+                border:0;
+>>>>>>> fastadmin/master
             }
             #sidebar .list-group a.current {
                 background:#f5f5f5;
@@ -106,9 +122,12 @@
             .label-primary {
                 background-color: #248aff;
             }
+<<<<<<< HEAD
             .docs-list .panel .panel-body .table {
                 margin-bottom: 0;
             }
+=======
+>>>>>>> fastadmin/master
 
         </style>
     </head>
@@ -155,6 +174,7 @@
                 <div class="list-group panel">
                                         <a href="#公共接口" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">公共接口  <i class="fa fa-caret-down"></i></a>
                     <div class="child collapse" id="公共接口">
+<<<<<<< HEAD
                                                 <a href="javascript:;" data-id="0" class="list-group-item">加载初始化                            <span class="tag">
                                                             </span>
                         </a>
@@ -282,6 +302,64 @@
                                     </div>
             </div>
             <div class="panel-group docs-list" id="accordion">
+=======
+                                                <a href="javascript:;" data-id="0" class="list-group-item">加载初始化</a>
+                                                <a href="javascript:;" data-id="1" class="list-group-item">上传文件</a>
+                                            </div>
+                                        <a href="#示例接口" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">示例接口  <i class="fa fa-caret-down"></i></a>
+                    <div class="child collapse" id="示例接口">
+                                                <a href="javascript:;" data-id="2" class="list-group-item">测试名称</a>
+                                                <a href="javascript:;" data-id="3" class="list-group-item">无需登录的接口</a>
+                                                <a href="javascript:;" data-id="4" class="list-group-item">需要登录的接口</a>
+                                                <a href="javascript:;" data-id="5" class="list-group-item">需要登录且需要验证有相应组的权限</a>
+                                            </div>
+                                        <a href="#邮箱验证码接口" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">邮箱验证码接口  <i class="fa fa-caret-down"></i></a>
+                    <div class="child collapse" id="邮箱验证码接口">
+                                                <a href="javascript:;" data-id="6" class="list-group-item">发送验证码</a>
+                                                <a href="javascript:;" data-id="7" class="list-group-item">检测验证码</a>
+                                            </div>
+                                        <a href="#首页接口" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">首页接口  <i class="fa fa-caret-down"></i></a>
+                    <div class="child collapse" id="首页接口">
+                                                <a href="javascript:;" data-id="8" class="list-group-item">首页</a>
+                                            </div>
+                                        <a href="#手机短信接口" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">手机短信接口  <i class="fa fa-caret-down"></i></a>
+                    <div class="child collapse" id="手机短信接口">
+                                                <a href="javascript:;" data-id="9" class="list-group-item">发送验证码</a>
+                                                <a href="javascript:;" data-id="10" class="list-group-item">检测验证码</a>
+                                            </div>
+                                        <a href="#Token接口" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">Token接口  <i class="fa fa-caret-down"></i></a>
+                    <div class="child collapse" id="Token接口">
+                                                <a href="javascript:;" data-id="11" class="list-group-item">检测Token是否过期</a>
+                                                <a href="javascript:;" data-id="12" class="list-group-item">刷新Token</a>
+                                            </div>
+                                        <a href="#会员接口" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">会员接口  <i class="fa fa-caret-down"></i></a>
+                    <div class="child collapse" id="会员接口">
+                                                <a href="javascript:;" data-id="13" class="list-group-item">会员中心</a>
+                                                <a href="javascript:;" data-id="14" class="list-group-item">会员登录</a>
+                                                <a href="javascript:;" data-id="15" class="list-group-item">手机验证码登录</a>
+                                                <a href="javascript:;" data-id="16" class="list-group-item">注册会员</a>
+                                                <a href="javascript:;" data-id="17" class="list-group-item">退出登录</a>
+                                                <a href="javascript:;" data-id="18" class="list-group-item">修改会员个人信息</a>
+                                                <a href="javascript:;" data-id="19" class="list-group-item">修改邮箱</a>
+                                                <a href="javascript:;" data-id="20" class="list-group-item">修改手机号</a>
+                                                <a href="javascript:;" data-id="21" class="list-group-item">第三方登录</a>
+                                                <a href="javascript:;" data-id="22" class="list-group-item">重置密码</a>
+                                            </div>
+                                        <a href="#验证接口" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">验证接口  <i class="fa fa-caret-down"></i></a>
+                    <div class="child collapse" id="验证接口">
+                                                <a href="javascript:;" data-id="23" class="list-group-item">检测邮箱</a>
+                                                <a href="javascript:;" data-id="24" class="list-group-item">检测用户名</a>
+                                                <a href="javascript:;" data-id="25" class="list-group-item">检测昵称</a>
+                                                <a href="javascript:;" data-id="26" class="list-group-item">检测手机</a>
+                                                <a href="javascript:;" data-id="27" class="list-group-item">检测手机</a>
+                                                <a href="javascript:;" data-id="28" class="list-group-item">检测邮箱</a>
+                                                <a href="javascript:;" data-id="29" class="list-group-item">检测手机验证码</a>
+                                                <a href="javascript:;" data-id="30" class="list-group-item">检测邮箱验证码</a>
+                                            </div>
+                                    </div>
+            </div>
+            <div class="panel-group" id="accordion">
+>>>>>>> fastadmin/master
                                 <h2>公共接口</h2>
                 <hr>
                                 <div class="panel panel-default">
@@ -308,6 +386,7 @@
                                     <div class="well">
                                         加载初始化                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -325,6 +404,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -376,11 +457,15 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/common/init" method="get" name="form0" id="form0">
                                                                                                                 <div class="form-group">
@@ -395,7 +480,11 @@
                                                             <label class="control-label" for="lat">lat</label>
                                                             <input type="string" class="form-control input-sm" id="lat" required placeholder="纬度" name="lat">
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="0">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="0">重置</button>
                                                         </div>
@@ -459,6 +548,7 @@
                                     <div class="well">
                                         上传文件                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -476,6 +566,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -515,18 +607,26 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/common/upload" method="POST" name="form1" id="form1">
                                                                                                                 <div class="form-group">
                                                             <label class="control-label" for="file">file</label>
                                                             <input type="File" class="form-control input-sm" id="file" required placeholder="文件流" name="file">
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="1">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="1">重置</button>
                                                         </div>
@@ -592,6 +692,7 @@
                                     <div class="well">
                                         测试描述信息                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -609,6 +710,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         <table class="table table-hover">
@@ -688,11 +791,15 @@
                                                 </div>
                                             </div>
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/demo/test/id/{id}/name/{name}" method="POST" name="form2" id="form2">
                                                                                                                 <div class="form-group">
@@ -707,7 +814,11 @@
                                                             <label class="control-label" for="data">data</label>
                                                             <input type="object" class="form-control input-sm" id="data" required placeholder="扩展数据 - 例: {'user_id':'int','user_name':'string','profile':{'email':'string','age':'integer'}}" name="data">
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="2">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="2">重置</button>
                                                         </div>
@@ -799,6 +910,7 @@
                                     <div class="well">
                                         无需登录的接口                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -816,6 +928,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -838,17 +952,25 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/demo/test1" method="get" name="form3" id="form3">
                                                                                                                 <div class="form-group">
                                                             无
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="3">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="3">重置</button>
                                                         </div>
@@ -912,6 +1034,7 @@
                                     <div class="well">
                                         需要登录的接口                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -929,6 +1052,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -951,17 +1076,25 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/demo/test2" method="get" name="form4" id="form4">
                                                                                                                 <div class="form-group">
                                                             无
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="4">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="4">重置</button>
                                                         </div>
@@ -1025,6 +1158,7 @@
                                     <div class="well">
                                         需要登录且需要验证有相应组的权限                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -1042,6 +1176,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -1064,17 +1200,25 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/demo/test3" method="get" name="form5" id="form5">
                                                                                                                 <div class="form-group">
                                                             无
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="5">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="5">重置</button>
                                                         </div>
@@ -1140,6 +1284,7 @@
                                     <div class="well">
                                         发送验证码                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -1157,6 +1302,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -1202,11 +1349,15 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/ems/send" method="get" name="form6" id="form6">
                                                                                                                 <div class="form-group">
@@ -1217,7 +1368,11 @@
                                                             <label class="control-label" for="event">event</label>
                                                             <input type="string" class="form-control input-sm" id="event" required placeholder="事件名称" name="event">
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="6">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="6">重置</button>
                                                         </div>
@@ -1281,6 +1436,7 @@
                                     <div class="well">
                                         检测验证码                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -1298,6 +1454,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -1349,11 +1507,15 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/ems/check" method="get" name="form7" id="form7">
                                                                                                                 <div class="form-group">
@@ -1368,7 +1530,11 @@
                                                             <label class="control-label" for="captcha">captcha</label>
                                                             <input type="string" class="form-control input-sm" id="captcha" required placeholder="验证码" name="captcha">
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="7">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="7">重置</button>
                                                         </div>
@@ -1434,6 +1600,7 @@
                                     <div class="well">
                                         首页                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -1451,6 +1618,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -1473,17 +1642,25 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/index/index" method="get" name="form8" id="form8">
                                                                                                                 <div class="form-group">
                                                             无
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="8">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="8">重置</button>
                                                         </div>
@@ -1549,6 +1726,7 @@
                                     <div class="well">
                                         发送验证码                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -1566,6 +1744,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -1611,11 +1791,15 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/sms/send" method="get" name="form9" id="form9">
                                                                                                                 <div class="form-group">
@@ -1626,7 +1810,11 @@
                                                             <label class="control-label" for="event">event</label>
                                                             <input type="string" class="form-control input-sm" id="event" required placeholder="事件名称" name="event">
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="9">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="9">重置</button>
                                                         </div>
@@ -1690,6 +1878,7 @@
                                     <div class="well">
                                         检测验证码                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -1707,6 +1896,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -1758,11 +1949,15 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/sms/check" method="get" name="form10" id="form10">
                                                                                                                 <div class="form-group">
@@ -1777,7 +1972,11 @@
                                                             <label class="control-label" for="captcha">captcha</label>
                                                             <input type="string" class="form-control input-sm" id="captcha" required placeholder="验证码" name="captcha">
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="10">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="10">重置</button>
                                                         </div>
@@ -1843,6 +2042,7 @@
                                     <div class="well">
                                         检测Token是否过期                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -1860,6 +2060,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -1882,17 +2084,25 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/token/check" method="get" name="form11" id="form11">
                                                                                                                 <div class="form-group">
                                                             无
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="11">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="11">重置</button>
                                                         </div>
@@ -1956,6 +2166,7 @@
                                     <div class="well">
                                         刷新Token                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -1973,6 +2184,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -1995,17 +2208,25 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/token/refresh" method="get" name="form12" id="form12">
                                                                                                                 <div class="form-group">
                                                             无
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="12">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="12">重置</button>
                                                         </div>
@@ -2071,6 +2292,7 @@
                                     <div class="well">
                                         会员中心                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -2088,6 +2310,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -2110,17 +2334,25 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/user/index" method="get" name="form13" id="form13">
                                                                                                                 <div class="form-group">
                                                             无
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="13">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="13">重置</button>
                                                         </div>
@@ -2184,6 +2416,7 @@
                                     <div class="well">
                                         会员登录                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -2201,6 +2434,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -2246,11 +2481,15 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/user/login" method="get" name="form14" id="form14">
                                                                                                                 <div class="form-group">
@@ -2261,7 +2500,11 @@
                                                             <label class="control-label" for="password">password</label>
                                                             <input type="string" class="form-control input-sm" id="password" required placeholder="密码" name="password">
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="14">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="14">重置</button>
                                                         </div>
@@ -2325,6 +2568,7 @@
                                     <div class="well">
                                         手机验证码登录                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -2342,6 +2586,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -2387,11 +2633,15 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/user/mobilelogin" method="get" name="form15" id="form15">
                                                                                                                 <div class="form-group">
@@ -2402,7 +2652,11 @@
                                                             <label class="control-label" for="captcha">captcha</label>
                                                             <input type="string" class="form-control input-sm" id="captcha" required placeholder="验证码" name="captcha">
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="15">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="15">重置</button>
                                                         </div>
@@ -2466,6 +2720,7 @@
                                     <div class="well">
                                         注册会员                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -2483,6 +2738,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -2546,11 +2803,15 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/user/register" method="get" name="form16" id="form16">
                                                                                                                 <div class="form-group">
@@ -2573,7 +2834,11 @@
                                                             <label class="control-label" for="code">code</label>
                                                             <input type="string" class="form-control input-sm" id="code" required placeholder="验证码" name="code">
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="16">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="16">重置</button>
                                                         </div>
@@ -2637,6 +2902,7 @@
                                     <div class="well">
                                         退出登录                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -2654,6 +2920,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -2676,17 +2944,25 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/user/logout" method="get" name="form17" id="form17">
                                                                                                                 <div class="form-group">
                                                             无
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="17">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="17">重置</button>
                                                         </div>
@@ -2750,6 +3026,7 @@
                                     <div class="well">
                                         修改会员个人信息                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -2767,6 +3044,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -2824,11 +3103,15 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/user/profile" method="get" name="form18" id="form18">
                                                                                                                 <div class="form-group">
@@ -2847,7 +3130,11 @@
                                                             <label class="control-label" for="bio">bio</label>
                                                             <input type="string" class="form-control input-sm" id="bio" required placeholder="个人简介" name="bio">
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="18">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="18">重置</button>
                                                         </div>
@@ -2911,6 +3198,7 @@
                                     <div class="well">
                                         修改邮箱                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -2928,6 +3216,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -2973,11 +3263,15 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/user/changeemail" method="get" name="form19" id="form19">
                                                                                                                 <div class="form-group">
@@ -2988,7 +3282,11 @@
                                                             <label class="control-label" for="captcha">captcha</label>
                                                             <input type="string" class="form-control input-sm" id="captcha" required placeholder="验证码" name="captcha">
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="19">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="19">重置</button>
                                                         </div>
@@ -3052,6 +3350,7 @@
                                     <div class="well">
                                         修改手机号                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -3069,6 +3368,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -3114,11 +3415,15 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/user/changemobile" method="get" name="form20" id="form20">
                                                                                                                 <div class="form-group">
@@ -3129,7 +3434,11 @@
                                                             <label class="control-label" for="captcha">captcha</label>
                                                             <input type="string" class="form-control input-sm" id="captcha" required placeholder="验证码" name="captcha">
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="20">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="20">重置</button>
                                                         </div>
@@ -3193,6 +3502,7 @@
                                     <div class="well">
                                         第三方登录                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -3210,6 +3520,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -3255,11 +3567,15 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/user/third" method="get" name="form21" id="form21">
                                                                                                                 <div class="form-group">
@@ -3270,7 +3586,11 @@
                                                             <label class="control-label" for="code">code</label>
                                                             <input type="string" class="form-control input-sm" id="code" required placeholder="Code码" name="code">
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="21">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="21">重置</button>
                                                         </div>
@@ -3334,6 +3654,7 @@
                                     <div class="well">
                                         重置密码                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -3351,6 +3672,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -3402,11 +3725,15 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/user/resetpwd" method="get" name="form22" id="form22">
                                                                                                                 <div class="form-group">
@@ -3421,7 +3748,11 @@
                                                             <label class="control-label" for="captcha">captcha</label>
                                                             <input type="string" class="form-control input-sm" id="captcha" required placeholder="验证码" name="captcha">
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="22">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="22">重置</button>
                                                         </div>
@@ -3487,6 +3818,7 @@
                                     <div class="well">
                                         检测邮箱                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -3504,6 +3836,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -3549,11 +3883,15 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/validate/check_email_available" method="get" name="form23" id="form23">
                                                                                                                 <div class="form-group">
@@ -3564,7 +3902,11 @@
                                                             <label class="control-label" for="id">id</label>
                                                             <input type="string" class="form-control input-sm" id="id" required placeholder="排除会员ID" name="id">
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="23">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="23">重置</button>
                                                         </div>
@@ -3628,6 +3970,7 @@
                                     <div class="well">
                                         检测用户名                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -3645,6 +3988,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -3690,11 +4035,15 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/validate/check_username_available" method="get" name="form24" id="form24">
                                                                                                                 <div class="form-group">
@@ -3705,7 +4054,11 @@
                                                             <label class="control-label" for="id">id</label>
                                                             <input type="string" class="form-control input-sm" id="id" required placeholder="排除会员ID" name="id">
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="24">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="24">重置</button>
                                                         </div>
@@ -3769,6 +4122,7 @@
                                     <div class="well">
                                         检测昵称                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -3786,6 +4140,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -3831,11 +4187,15 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/validate/check_nickname_available" method="get" name="form25" id="form25">
                                                                                                                 <div class="form-group">
@@ -3846,7 +4206,11 @@
                                                             <label class="control-label" for="id">id</label>
                                                             <input type="string" class="form-control input-sm" id="id" required placeholder="排除会员ID" name="id">
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="25">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="25">重置</button>
                                                         </div>
@@ -3910,6 +4274,7 @@
                                     <div class="well">
                                         检测手机                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -3927,6 +4292,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -3972,11 +4339,15 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/validate/check_mobile_available" method="get" name="form26" id="form26">
                                                                                                                 <div class="form-group">
@@ -3987,7 +4358,11 @@
                                                             <label class="control-label" for="id">id</label>
                                                             <input type="string" class="form-control input-sm" id="id" required placeholder="排除会员ID" name="id">
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="26">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="26">重置</button>
                                                         </div>
@@ -4051,6 +4426,7 @@
                                     <div class="well">
                                         检测手机                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -4068,6 +4444,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -4107,18 +4485,26 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/validate/check_mobile_exist" method="get" name="form27" id="form27">
                                                                                                                 <div class="form-group">
                                                             <label class="control-label" for="mobile">mobile</label>
                                                             <input type="string" class="form-control input-sm" id="mobile" required placeholder="手机号" name="mobile">
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="27">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="27">重置</button>
                                                         </div>
@@ -4182,6 +4568,7 @@
                                     <div class="well">
                                         检测邮箱                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -4199,6 +4586,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -4238,18 +4627,26 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/validate/check_email_exist" method="get" name="form28" id="form28">
                                                                                                                 <div class="form-group">
                                                             <label class="control-label" for="mobile">mobile</label>
                                                             <input type="string" class="form-control input-sm" id="mobile" required placeholder="邮箱" name="mobile">
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="28">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="28">重置</button>
                                                         </div>
@@ -4313,6 +4710,7 @@
                                     <div class="well">
                                         检测手机验证码                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -4330,6 +4728,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -4381,11 +4781,15 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/validate/check_sms_correct" method="get" name="form29" id="form29">
                                                                                                                 <div class="form-group">
@@ -4400,7 +4804,11 @@
                                                             <label class="control-label" for="event">event</label>
                                                             <input type="string" class="form-control input-sm" id="event" required placeholder="事件" name="event">
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="29">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="29">重置</button>
                                                         </div>
@@ -4464,6 +4872,7 @@
                                     <div class="well">
                                         检测邮箱验证码                                    </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>权限</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -4481,6 +4890,8 @@
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
+=======
+>>>>>>> fastadmin/master
                                         <div class="panel-heading"><strong>Headers</strong></div>
                                         <div class="panel-body">
                                                                                         无
@@ -4532,11 +4943,15 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                                                                         <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>参数</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
                                                 </div>
                                                 </div>
+=======
+                                                <div class="panel-heading"><strong>参数</strong></div>
+>>>>>>> fastadmin/master
                                                 <div class="panel-body">
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="/api/validate/check_ems_correct" method="get" name="form30" id="form30">
                                                                                                                 <div class="form-group">
@@ -4551,7 +4966,11 @@
                                                             <label class="control-label" for="event">event</label>
                                                             <input type="string" class="form-control input-sm" id="event" required placeholder="事件" name="event">
                                                         </div>
+<<<<<<< HEAD
                                                                                                                 <div class="form-group form-group-submit">
+=======
+                                                                                                                <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="30">提交</button>
                                                             <button type="reset" class="btn btn-info" rel="30">重置</button>
                                                         </div>
@@ -4597,10 +5016,16 @@
 
             <div class="row mt0 footer">
                 <div class="col-md-6" align="left">
+<<<<<<< HEAD
 
                 </div>
                 <div class="col-md-6" align="right">
                     Generated on 2020-12-21 11:39:26 <a href="./" target="_blank">我的网站</a>
+=======
+                    Generated on 2020-08-12 21:00:33                </div>
+                <div class="col-md-6" align="right">
+                    <a href="./" target="_blank">我的网站</a>
+>>>>>>> fastadmin/master
                 </div>
             </div>
 
@@ -4726,7 +5151,11 @@
                     $sample.html('<pre>' + str + '</pre>');
                 });
 
+<<<<<<< HEAD
                 $(document).on('click', '#save_data', function (e) {
+=======
+                $('body').on('click', '#save_data', function (e) {
+>>>>>>> fastadmin/master
                     if (storage) {
                         storage.setItem('token', $('#token').val());
                         storage.setItem('apiUrl', $('#apiUrl').val());
@@ -4734,6 +5163,7 @@
                         alert('Your browser does not support local storage');
                     }
                 });
+<<<<<<< HEAD
                 $(document).on('click', '.btn-append', function (e) {
                     $($("#appendtpl").html()).insertBefore($(this).closest(".panel").find(".form-group-submit"));
                     return false;
@@ -4748,6 +5178,10 @@
                 });
 
                 $(document).on('click', '.send', function (e) {
+=======
+
+                $('body').on('click', '.send', function (e) {
+>>>>>>> fastadmin/master
                     e.preventDefault();
                     var form = $(this).closest('form');
                     //added /g to get all the matched params instead of only first
@@ -4840,6 +5274,7 @@
                 });
             });
         </script>
+<<<<<<< HEAD
         <script type="text/html" id="appendtpl">
             <div class="form-group">
                 <label class="control-label">自定义</label>
@@ -4856,5 +5291,7 @@
                 </div>
             </div>
         </script>
+=======
+>>>>>>> fastadmin/master
     </body>
 </html>

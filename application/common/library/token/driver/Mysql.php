@@ -36,19 +36,28 @@ class Mysql extends Driver
         } else {
             $this->handler = \think\Db::name($this->options['table']);
         }
+<<<<<<< HEAD
         $time = time();
         $tokentime = cache('tokentime');
         if (!$tokentime || $tokentime < $time - 86400) {
             cache('tokentime', $time);
             $this->handler->where('expiretime', '<', $time)->where('expiretime', '>', 0)->delete();
         }
+=======
+>>>>>>> fastadmin/master
     }
 
     /**
      * 存储Token
+<<<<<<< HEAD
      * @param string $token   Token
      * @param int    $user_id 会员ID
      * @param int    $expire  过期时长,0表示无限,单位秒
+=======
+     * @param   string $token   Token
+     * @param   int    $user_id 会员ID
+     * @param   int    $expire  过期时长,0表示无限,单位秒
+>>>>>>> fastadmin/master
      * @return bool
      */
     public function set($token, $user_id, $expire = null)
@@ -56,12 +65,20 @@ class Mysql extends Driver
         $expiretime = !is_null($expire) && $expire !== 0 ? time() + $expire : 0;
         $token = $this->getEncryptedToken($token);
         $this->handler->insert(['token' => $token, 'user_id' => $user_id, 'createtime' => time(), 'expiretime' => $expiretime]);
+<<<<<<< HEAD
         return true;
+=======
+        return TRUE;
+>>>>>>> fastadmin/master
     }
 
     /**
      * 获取Token内的信息
+<<<<<<< HEAD
      * @param string $token
+=======
+     * @param   string $token
+>>>>>>> fastadmin/master
      * @return  array
      */
     public function get($token)
@@ -83,8 +100,13 @@ class Mysql extends Driver
 
     /**
      * 判断Token是否可用
+<<<<<<< HEAD
      * @param string $token   Token
      * @param int    $user_id 会员ID
+=======
+     * @param   string $token   Token
+     * @param   int    $user_id 会员ID
+>>>>>>> fastadmin/master
      * @return  boolean
      */
     public function check($token, $user_id)
@@ -95,7 +117,11 @@ class Mysql extends Driver
 
     /**
      * 删除Token
+<<<<<<< HEAD
      * @param string $token
+=======
+     * @param   string $token
+>>>>>>> fastadmin/master
      * @return  boolean
      */
     public function delete($token)
@@ -106,7 +132,11 @@ class Mysql extends Driver
 
     /**
      * 删除指定用户的所有Token
+<<<<<<< HEAD
      * @param int $user_id
+=======
+     * @param   int $user_id
+>>>>>>> fastadmin/master
      * @return  boolean
      */
     public function clear($user_id)

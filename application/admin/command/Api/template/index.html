@@ -27,12 +27,20 @@
                 font-family: "Roboto", "SF Pro SC", "SF Pro Display", "SF Pro Icons", "PingFang SC", BlinkMacSystemFont, -apple-system, "Segoe UI", "Microsoft Yahei", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
                 font-weight: 400;
             }
+<<<<<<< HEAD
             h2        { font-size: 1.2em; }
+=======
+            h2        { font-size: 1.6em; }
+>>>>>>> fastadmin/master
             hr        { margin-top: 10px; }
             .tab-pane { padding-top: 10px; }
             .mt0      { margin-top: 0px; }
             .footer   { font-size: 12px; color: #666; }
+<<<<<<< HEAD
             .docs-list .label    { display: inline-block; min-width: 65px; padding: 0.3em 0.6em 0.3em; }
+=======
+            .label    { display: inline-block; min-width: 65px; padding: 0.3em 0.6em 0.3em; }
+>>>>>>> fastadmin/master
             .string   { color: green; }
             .number   { color: darkorange; }
             .boolean  { color: blue; }
@@ -65,6 +73,7 @@
             #sidebar > .list-group > a{
                 text-indent:0;
             }
+<<<<<<< HEAD
             #sidebar .child > a .tag{
                 position: absolute;
                 right: 10px;
@@ -73,16 +82,23 @@
             #sidebar .child > a .pull-right{
                 margin-left:3px;
             }
+=======
+>>>>>>> fastadmin/master
             #sidebar .child {
                 border:1px solid #ddd;
                 border-bottom:none;
             }
+<<<<<<< HEAD
             #sidebar .child:last-child {
                 border-bottom:1px solid #ddd;
             }
             #sidebar .child > a {
                 border:0;
                 min-height: 40px;
+=======
+            #sidebar .child > a {
+                border:0;
+>>>>>>> fastadmin/master
             }
             #sidebar .list-group a.current {
                 background:#f5f5f5;
@@ -106,9 +122,12 @@
             .label-primary {
                 background-color: #248aff;
             }
+<<<<<<< HEAD
             .docs-list .panel .panel-body .table {
                 margin-bottom: 0;
             }
+=======
+>>>>>>> fastadmin/master
 
         </style>
     </head>
@@ -153,6 +172,7 @@
             <!-- menu -->
             <div id="sidebar">
                 <div class="list-group panel">
+<<<<<<< HEAD
                     {foreach name="docsList" id="docs"}
                     <a href="#{$key}" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">{$key}  <i class="fa fa-caret-down"></i></a>
                     <div class="child collapse" id="{$key}">
@@ -167,20 +187,36 @@
                                 {/if}
                             </span>
                         </a>
+=======
+                    {foreach name="docslist" id="docs"}
+                    <a href="#{$key}" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">{$key}  <i class="fa fa-caret-down"></i></a>
+                    <div class="child collapse" id="{$key}">
+                        {foreach name="docs" id="api" }
+                        <a href="javascript:;" data-id="{$api.id}" class="list-group-item">{$api.title}</a>
+>>>>>>> fastadmin/master
                         {/foreach}
                     </div>
                     {/foreach}
                 </div>
             </div>
+<<<<<<< HEAD
             <div class="panel-group docs-list" id="accordion">
                 {foreach name="docsList" id="docs"}
+=======
+            <div class="panel-group" id="accordion">
+                {foreach name="docslist" id="docs"}
+>>>>>>> fastadmin/master
                 <h2>{$key}</h2>
                 <hr>
                 {foreach name="docs" id="api" }
                 <div class="panel panel-default">
                     <div class="panel-heading" id="heading-{$api.id}">
                         <h4 class="panel-title">
+<<<<<<< HEAD
                             <span class="label {$api.methodLabel}">{$api.method|strtoupper}</span>
+=======
+                            <span class="label {$api.method_label}">{$api.method|strtoupper}</span>
+>>>>>>> fastadmin/master
                             <a data-toggle="collapse" data-parent="#accordion{$api.id}" href="#collapseOne{$api.id}"> {$api.title} <span class="text-muted">{$api.route}</span></a>
                         </h4>
                     </div>
@@ -202,6 +238,7 @@
                                         {$api.summary}
                                     </div>
                                     <div class="panel panel-default">
+<<<<<<< HEAD
                                         <div class="panel-heading"><strong>{$lang.Authorization}</strong></div>
                                         <div class="panel-body">
                                             <table class="table table-hover">
@@ -222,6 +259,11 @@
                                         <div class="panel-heading"><strong>{$lang.Headers}</strong></div>
                                         <div class="panel-body">
                                             {if $api.headersList}
+=======
+                                        <div class="panel-heading"><strong>{$lang.Headers}</strong></div>
+                                        <div class="panel-body">
+                                            {if $api.headerslist}
+>>>>>>> fastadmin/master
                                             <table class="table table-hover">
                                                 <thead>
                                                     <tr>
@@ -232,7 +274,11 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+<<<<<<< HEAD
                                                     {foreach name="api['headersList']" id="header"}
+=======
+                                                    {foreach name="api['headerslist']" id="header"}
+>>>>>>> fastadmin/master
                                                     <tr>
                                                         <td>{$header.name}</td>
                                                         <td>{$header.type}</td>
@@ -250,7 +296,11 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading"><strong>{$lang.Parameters}</strong></div>
                                         <div class="panel-body">
+<<<<<<< HEAD
                                             {if $api.paramsList}
+=======
+                                            {if $api.paramslist}
+>>>>>>> fastadmin/master
                                             <table class="table table-hover">
                                                 <thead>
                                                     <tr>
@@ -261,7 +311,11 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+<<<<<<< HEAD
                                                     {foreach name="api['paramsList']" id="param"}
+=======
+                                                    {foreach name="api['paramslist']" id="param"}
+>>>>>>> fastadmin/master
                                                     <tr>
                                                         <td>{$param.name}</td>
                                                         <td>{$param.type}</td>
@@ -287,12 +341,20 @@
                                 <div class="tab-pane" id="sandbox{$api.id}">
                                     <div class="row">
                                         <div class="col-md-12">
+<<<<<<< HEAD
                                             {if $api.headersList}
+=======
+                                            {if $api.headerslist}
+>>>>>>> fastadmin/master
                                             <div class="panel panel-default">
                                                 <div class="panel-heading"><strong>{$lang.Headers}</strong></div>
                                                 <div class="panel-body">
                                                     <div class="headers">
+<<<<<<< HEAD
                                                         {foreach name="api['headersList']" id="param"}
+=======
+                                                        {foreach name="api['headerslist']" id="param"}
+>>>>>>> fastadmin/master
                                                         <div class="form-group">
                                                             <label class="control-label" for="{$param.name}">{$param.name}</label>
                                                             <input type="{$param.type}" class="form-control input-sm" id="{$param.name}" {if $param.required}required{/if} placeholder="{$param.description} - Ex: {$param.sample}" name="{$param.name}">
@@ -303,6 +365,7 @@
                                             </div>
                                             {/if}
                                             <div class="panel panel-default">
+<<<<<<< HEAD
                                                 <div class="panel-heading"><strong>{$lang.Parameters}</strong>
                                                 <div class="pull-right">
                                                     <a href="javascript:" class="btn btn-xs btn-info btn-append">追加</a>
@@ -312,6 +375,13 @@
                                                     <form enctype="application/x-www-form-urlencoded" role="form" action="{$api.route}" method="{$api.method}" name="form{$api.id}" id="form{$api.id}">
                                                         {if $api.paramsList}
                                                         {foreach name="api['paramsList']" id="param"}
+=======
+                                                <div class="panel-heading"><strong>{$lang.Parameters}</strong></div>
+                                                <div class="panel-body">
+                                                    <form enctype="application/x-www-form-urlencoded" role="form" action="{$api.route}" method="{$api.method}" name="form{$api.id}" id="form{$api.id}">
+                                                        {if $api.paramslist}
+                                                        {foreach name="api['paramslist']" id="param"}
+>>>>>>> fastadmin/master
                                                         <div class="form-group">
                                                             <label class="control-label" for="{$param.name}">{$param.name}</label>
                                                             <input type="{$param.type}" class="form-control input-sm" id="{$param.name}" {if $param.required}required{/if} placeholder="{$param.description}{if $param.sample} - 例: {$param.sample}{/if}" name="{$param.name}">
@@ -322,7 +392,11 @@
                                                             无
                                                         </div>
                                                         {/if}
+<<<<<<< HEAD
                                                         <div class="form-group form-group-submit">
+=======
+                                                        <div class="form-group">
+>>>>>>> fastadmin/master
                                                             <button type="submit" class="btn btn-success send" rel="{$api.id}">{$lang.Send}</button>
                                                             <button type="reset" class="btn btn-info" rel="{$api.id}">{$lang.Reset}</button>
                                                         </div>
@@ -343,7 +417,11 @@
                                             <div class="panel panel-default">
                                                 <div class="panel-heading"><strong>{$lang.ReturnParameters}</strong></div>
                                                 <div class="panel-body">
+<<<<<<< HEAD
                                                     {if $api.returnParamsList}
+=======
+                                                    {if $api.returnparamslist}
+>>>>>>> fastadmin/master
                                                     <table class="table table-hover">
                                                         <thead>
                                                             <tr>
@@ -353,7 +431,11 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
+<<<<<<< HEAD
                                                             {foreach name="api['returnParamsList']" id="param"}
+=======
+                                                            {foreach name="api['returnparamslist']" id="param"}
+>>>>>>> fastadmin/master
                                                             <tr>
                                                                 <td>{$param.name}</td>
                                                                 <td>{$param.type}</td>
@@ -391,10 +473,17 @@
 
             <div class="row mt0 footer">
                 <div class="col-md-6" align="left">
+<<<<<<< HEAD
 
                 </div>
                 <div class="col-md-6" align="right">
                     Generated on {:date('Y-m-d H:i:s')} <a href="./" target="_blank">{$config.sitename}</a>
+=======
+                    Generated on {:date('Y-m-d H:i:s')}
+                </div>
+                <div class="col-md-6" align="right">
+                    <a href="./" target="_blank">{$config.sitename}</a>
+>>>>>>> fastadmin/master
                 </div>
             </div>
 
@@ -520,7 +609,11 @@
                     $sample.html('<pre>' + str + '</pre>');
                 });
 
+<<<<<<< HEAD
                 $(document).on('click', '#save_data', function (e) {
+=======
+                $('body').on('click', '#save_data', function (e) {
+>>>>>>> fastadmin/master
                     if (storage) {
                         storage.setItem('token', $('#token').val());
                         storage.setItem('apiUrl', $('#apiUrl').val());
@@ -528,6 +621,7 @@
                         alert('Your browser does not support local storage');
                     }
                 });
+<<<<<<< HEAD
                 $(document).on('click', '.btn-append', function (e) {
                     $($("#appendtpl").html()).insertBefore($(this).closest(".panel").find(".form-group-submit"));
                     return false;
@@ -542,6 +636,10 @@
                 });
 
                 $(document).on('click', '.send', function (e) {
+=======
+
+                $('body').on('click', '.send', function (e) {
+>>>>>>> fastadmin/master
                     e.preventDefault();
                     var form = $(this).closest('form');
                     //added /g to get all the matched params instead of only first
@@ -634,6 +732,7 @@
                 });
             });
         </script>
+<<<<<<< HEAD
         <script type="text/html" id="appendtpl">
             <div class="form-group">
                 <label class="control-label">自定义</label>
@@ -650,5 +749,7 @@
                 </div>
             </div>
         </script>
+=======
+>>>>>>> fastadmin/master
     </body>
 </html>

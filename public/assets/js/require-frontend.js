@@ -120,7 +120,11 @@ require.config({
             'css': '../libs/require-css/css.min'
         }
     },
+<<<<<<< HEAD
     waitSeconds: 60,
+=======
+    waitSeconds: 30,
+>>>>>>> fastadmin/master
     charset: 'utf-8' // 文件编码
 });
 

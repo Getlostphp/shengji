@@ -24,7 +24,10 @@ class Group extends Backend
     //当前登录管理员所有子组别
     protected $childrenGroupIds = [];
     //当前组别列表数据
+<<<<<<< HEAD
     protected $grouplist = [];
+=======
+>>>>>>> fastadmin/master
     protected $groupdata = [];
     //无需要权限判断的方法
     protected $noNeedRight = ['roletree'];
@@ -39,6 +42,7 @@ class Group extends Backend
         $groupList = collection(AuthGroup::where('id', 'in', $this->childrenGroupIds)->select())->toArray();
 
         Tree::instance()->init($groupList);
+<<<<<<< HEAD
         $groupList = [];
         if ($this->auth->isSuperAdmin()) {
             $groupList = Tree::instance()->getTreeList(Tree::instance()->getTreeArray(0));
@@ -61,6 +65,22 @@ class Group extends Backend
         }
 
         $this->grouplist = $groupList;
+=======
+        $result = [];
+        if ($this->auth->isSuperAdmin()) {
+            $result = Tree::instance()->getTreeList(Tree::instance()->getTreeArray(0));
+        } else {
+            $groups = $this->auth->getGroups();
+            foreach ($groups as $m => $n) {
+                $result = array_merge($result, Tree::instance()->getTreeList(Tree::instance()->getTreeArray($n['pid'])));
+            }
+        }
+        $groupName = [];
+        foreach ($result as $k => $v) {
+            $groupName[$v['id']] = $v['name'];
+        }
+
+>>>>>>> fastadmin/master
         $this->groupdata = $groupName;
         $this->assignconfig("admin", ['id' => $this->auth->id, 'group_ids' => $this->auth->getGroupIds()]);
 
@@ -73,7 +93,23 @@ class Group extends Backend
     public function index()
     {
         if ($this->request->isAjax()) {
+<<<<<<< HEAD
             $list = $this->grouplist;
+=======
+            $list = AuthGroup::all(array_keys($this->groupdata));
+            $list = collection($list)->toArray();
+            $groupList = [];
+            foreach ($list as $k => $v) {
+                $groupList[$v['id']] = $v;
+            }
+            $list = [];
+            foreach ($this->groupdata as $k => $v) {
+                if (isset($groupList[$k])) {
+                    $groupList[$k]['name'] = $v;
+                    $list[] = $groupList[$k];
+                }
+            }
+>>>>>>> fastadmin/master
             $total = count($list);
             $result = array("total" => $total, "rows" => $list);
 

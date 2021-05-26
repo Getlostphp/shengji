@@ -325,7 +325,11 @@ define(['jquery', 'bootstrap', 'upload', 'validator', 'validator-lang'], functio
                         //追加控制
                         $(".fieldlist", form).on("click", ".btn-append,.append", function (e, row) {
                             var container = $(this).closest(".fieldlist");
+<<<<<<< HEAD
                             var tagName = container.data("tag") || (container.is("table") ? "tr" : "dd");
+=======
+                            var tagName = container.data("tag") || "dd";
+>>>>>>> fastadmin/master
                             var index = container.data("index");
                             var name = container.data("name");
                             var template = container.data("template");
@@ -335,20 +339,32 @@ define(['jquery', 'bootstrap', 'upload', 'validator', 'validator-lang'], functio
                             row = row ? row : {};
                             var vars = {index: index, name: name, data: data, row: row};
                             var html = template ? Template(template, vars) : Template.render(Form.config.fieldlisttpl, vars);
+<<<<<<< HEAD
                             $(html).attr("fieldlist-item", true).insertBefore($(tagName + ":last", container));
+=======
+                            $(html).insertBefore($(tagName + ":last", container));
+>>>>>>> fastadmin/master
                             $(this).trigger("fa.event.appendfieldlist", $(this).closest(tagName).prev());
                         });
                         //移除控制
                         $(".fieldlist", form).on("click", ".btn-remove", function () {
                             var container = $(this).closest(".fieldlist");
+<<<<<<< HEAD
                             var tagName = container.data("tag") || (container.is("table") ? "tr" : "dd");
+=======
+                            var tagName = container.data("tag") || "dd";
+>>>>>>> fastadmin/master
                             $(this).closest(tagName).remove();
                             refresh(container.data("name"));
                         });
                         //渲染数据&拖拽排序
                         $(".fieldlist", form).each(function () {
                             var container = this;
+<<<<<<< HEAD
                             var tagName = $(this).data("tag") || ($(this).is("table") ? "tr" : "dd");
+=======
+                            var tagName = $(this).data("tag") || "dd";
+>>>>>>> fastadmin/master
                             $(this).dragsort({
                                 itemSelector: tagName,
                                 dragSelector: ".btn-dragsort",
@@ -362,6 +378,7 @@ define(['jquery', 'bootstrap', 'upload', 'validator', 'validator-lang'], functio
                                 return true;
                             }
                             var template = $(this).data("template");
+<<<<<<< HEAD
                             textarea.on("fa.event.refreshfieldlist", function () {
                                 $("[fieldlist-item]", container).remove();
                                 var json = {};
@@ -376,6 +393,19 @@ define(['jquery', 'bootstrap', 'upload', 'validator', 'validator-lang'], functio
                                 });
                             });
                             textarea.trigger("fa.event.refreshfieldlist");
+=======
+                            var json = {};
+                            try {
+                                json = JSON.parse(textarea.val());
+                            } catch (e) {
+                            }
+                            $.each(json, function (i, j) {
+                                $(".btn-append,.append", container).trigger('click', template ? j : {
+                                    key: i,
+                                    value: j
+                                });
+                            });
+>>>>>>> fastadmin/master
                         });
                     });
                 }

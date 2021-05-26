@@ -99,7 +99,11 @@ class Config extends Backend
                 }
                 if ($result !== false) {
                     try {
+<<<<<<< HEAD
                         ConfigModel::refreshFile();
+=======
+                        $this->refreshFile();
+>>>>>>> fastadmin/master
                     } catch (Exception $e) {
                         $this->error($e->getMessage());
                     }
@@ -142,7 +146,11 @@ class Config extends Backend
                     $this->error($e->getMessage());
                 }
                 try {
+<<<<<<< HEAD
                     ConfigModel::refreshFile();
+=======
+                    $this->refreshFile();
+>>>>>>> fastadmin/master
                 } catch (Exception $e) {
                     $this->error($e->getMessage());
                 }
@@ -163,7 +171,11 @@ class Config extends Backend
         if ($name && $config) {
             try {
                 $config->delete();
+<<<<<<< HEAD
                 ConfigModel::refreshFile();
+=======
+                $this->refreshFile();
+>>>>>>> fastadmin/master
             } catch (Exception $e) {
                 $this->error($e->getMessage());
             }
@@ -174,6 +186,31 @@ class Config extends Backend
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * 刷新配置文件
+     */
+    protected function refreshFile()
+    {
+        $config = [];
+        foreach ($this->model->all() as $k => $v) {
+            $value = $v->toArray();
+            if (in_array($value['type'], ['selects', 'checkbox', 'images', 'files'])) {
+                $value['value'] = explode(',', $value['value']);
+            }
+            if ($value['type'] == 'array') {
+                $value['value'] = (array)json_decode($value['value'], true);
+            }
+            $config[$value['name']] = $value['value'];
+        }
+        file_put_contents(
+            CONF_PATH . 'extra' . DS . 'site.php',
+            '<?php' . "\n\nreturn " . var_export_short($config) . ";\n"
+        );
+    }
+
+    /**
+>>>>>>> fastadmin/master
      * 检测配置项是否存在
      * @internal
      */
@@ -234,8 +271,13 @@ class Config extends Backend
             $email = new Email;
             $result = $email
                 ->to($receiver)
+<<<<<<< HEAD
                 ->subject(__("This is a test mail", config('site.name')))
                 ->message('<div style="min-height:550px; padding: 100px 55px 200px;">' . __('This is a test mail content', config('site.name')) . '</div>')
+=======
+                ->subject(__("This is a test mail"))
+                ->message('<div style="min-height:550px; padding: 100px 55px 200px;">' . __('This is a test mail content') . '</div>')
+>>>>>>> fastadmin/master
                 ->send();
             if ($result) {
                 $this->success();

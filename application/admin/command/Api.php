@@ -23,9 +23,15 @@ class Api extends Command
             ->addOption('template', 'e', Option::VALUE_OPTIONAL, '', 'index.html')
             ->addOption('force', 'f', Option::VALUE_OPTIONAL, 'force override general file', false)
             ->addOption('title', 't', Option::VALUE_OPTIONAL, 'document title', $site['name'])
+<<<<<<< HEAD
             ->addOption('class', 'c', Option::VALUE_OPTIONAL | Option::VALUE_IS_ARRAY, 'extend class', null)
             ->addOption('language', 'l', Option::VALUE_OPTIONAL, 'language', 'zh-cn')
             ->addOption('addon', 'a', Option::VALUE_OPTIONAL, 'addon name', null)
+=======
+            ->addOption('author', 'a', Option::VALUE_OPTIONAL, 'document author', $site['name'])
+            ->addOption('class', 'c', Option::VALUE_OPTIONAL | Option::VALUE_IS_ARRAY, 'extend class', null)
+            ->addOption('language', 'l', Option::VALUE_OPTIONAL, 'language', 'zh-cn')
+>>>>>>> fastadmin/master
             ->addOption('controller', 'r', Option::VALUE_REQUIRED | Option::VALUE_IS_ARRAY, 'controller name', null)
             ->setDescription('Build Api document from controller');
     }
@@ -37,10 +43,13 @@ class Api extends Command
         $force = $input->getOption('force');
         $url = $input->getOption('url');
         $language = $input->getOption('language');
+<<<<<<< HEAD
         $template = $input->getOption('template');
         if (!preg_match("/^([a-z0-9]+)\.html\$/i", $template)) {
             throw new Exception('template file not correct');
         }
+=======
+>>>>>>> fastadmin/master
         $language = $language ? $language : 'zh-cn';
         $langFile = $apiDir . 'lang' . DS . $language . '.php';
         if (!is_file($langFile)) {
@@ -55,7 +64,11 @@ class Api extends Command
         }
         // 模板文件
         $template_dir = $apiDir . 'template' . DS;
+<<<<<<< HEAD
         $template_file = $template_dir . $template;
+=======
+        $template_file = $template_dir . $input->getOption('template');
+>>>>>>> fastadmin/master
         if (!is_file($template_file)) {
             throw new Exception('template file not found');
         }
@@ -63,6 +76,7 @@ class Api extends Command
         $classes = $input->getOption('class');
         // 标题
         $title = $input->getOption('title');
+<<<<<<< HEAD
         // 模块
         $module = $input->getOption('module');
         // 插件
@@ -78,6 +92,14 @@ class Api extends Command
         } else {
             $moduleDir = APP_PATH . $module . DS;
         }
+=======
+        // 作者
+        $author = $input->getOption('author');
+        // 模块
+        $module = $input->getOption('module');
+
+        $moduleDir = APP_PATH . $module . DS;
+>>>>>>> fastadmin/master
         if (!is_dir($moduleDir)) {
             throw new Exception('module not found');
         }
@@ -94,10 +116,16 @@ class Api extends Command
                 throw new Exception("Please make sure opcache already enabled, Get help:https://forum.fastadmin.net/d/1321");
             }
         }
+<<<<<<< HEAD
 
         //控制器名
         $controller = $input->getOption('controller') ?: [];
         if (!$controller) {
+=======
+        //控制器名
+        $controller = $input->getOption('controller') ?: '';
+        if(!$controller) {
+>>>>>>> fastadmin/master
             $controllerDir = $moduleDir . Config::get('url_controller_layer') . DS;
             $files = new \RecursiveIteratorIterator(
                 new \RecursiveDirectoryIterator($controllerDir),
@@ -110,6 +138,7 @@ class Api extends Command
                     $classes[] = $this->get_class_from_file($filePath);
                 }
             }
+<<<<<<< HEAD
         } else {
             foreach ($controller as $index => $item) {
                 $filePath = $moduleDir . Config::get('url_controller_layer') . DS . $item . '.php';
@@ -117,22 +146,41 @@ class Api extends Command
             }
         }
 
+=======
+        }
+        else{
+            foreach ($controller as $index => $item) {
+                $filePath=$moduleDir . Config::get('url_controller_layer') . DS .$item.'.php';
+                $classes[] = $this->get_class_from_file($filePath);
+            }
+        }
+>>>>>>> fastadmin/master
         $classes = array_unique(array_filter($classes));
 
         $config = [
             'sitename'    => config('site.name'),
             'title'       => $title,
+<<<<<<< HEAD
             'author'      => config('site.name'),
+=======
+            'author'      => $author,
+>>>>>>> fastadmin/master
             'description' => '',
             'apiurl'      => $url,
             'language'    => $language,
         ];
+<<<<<<< HEAD
         try {
             $builder = new Builder($classes);
             $content = $builder->render($template_file, ['config' => $config, 'lang' => $lang]);
         } catch (\Exception $e) {
             print_r($e);
         }
+=======
+        $builder = new Builder($classes);
+        $content = $builder->render($template_file, ['config' => $config, 'lang' => $lang]);
+
+>>>>>>> fastadmin/master
         if (!file_put_contents($output_file, $content)) {
             throw new Exception('Cannot save the content to ' . $output_file);
         }

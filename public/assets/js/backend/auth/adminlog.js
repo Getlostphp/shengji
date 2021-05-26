@@ -18,8 +18,11 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             // 初始化表格
             table.bootstrapTable({
                 url: $.fn.bootstrapTable.defaults.extend.index_url,
+<<<<<<< HEAD
                 maintainSelected:true,
 
+=======
+>>>>>>> fastadmin/master
                 columns: [
                     [
                         {field: 'state', checkbox: true, },
@@ -45,10 +48,13 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 ]
             });
 
+<<<<<<< HEAD
             $(document).on('click','.btn-del',function () {
                 var ids =   Table.api.selectedids(table);
                 console.log(ids);
             })
+=======
+>>>>>>> fastadmin/master
             // 为表格绑定事件
             Table.api.bindevent(table);
         },

@@ -71,6 +71,7 @@ class Auth
     }
 
     /**
+<<<<<<< HEAD
      * 兼容调用user模型的属性
      */
     public function __isset($name)
@@ -79,6 +80,8 @@ class Auth
     }
 
     /**
+=======
+>>>>>>> fastadmin/master
      * 根据Token初始化
      *
      * @param string $token Token

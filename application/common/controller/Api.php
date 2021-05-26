@@ -95,9 +95,12 @@ class Api
         //跨域请求检测
         check_cors_request();
 
+<<<<<<< HEAD
         // 检测IP是否允许
         check_ip_allowed();
 
+=======
+>>>>>>> fastadmin/master
         //移除HTML标签
         $this->request->filter('trim,strip_tags,htmlspecialchars');
 

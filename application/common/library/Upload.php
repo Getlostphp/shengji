@@ -76,7 +76,10 @@ class Upload
 
         $this->file = $file;
         $this->fileInfo = $fileInfo;
+<<<<<<< HEAD
         $this->checkExecutable();
+=======
+>>>>>>> fastadmin/master
     }
 
     protected function checkExecutable()
@@ -172,9 +175,12 @@ class Upload
      */
     public function clean($chunkid)
     {
+<<<<<<< HEAD
         if (!preg_match('/^[a-z0-9\-]{36}$/', $chunkid)) {
             throw new UploadException(__('Invalid parameters'));
         }
+=======
+>>>>>>> fastadmin/master
         $iterator = new \GlobIterator($this->chunkDir . DS . $chunkid . '-*', FilesystemIterator::KEY_AS_FILENAME);
         $array = iterator_to_array($iterator);
         foreach ($array as $index => &$item) {
@@ -194,10 +200,13 @@ class Upload
      */
     public function merge($chunkid, $chunkcount, $filename)
     {
+<<<<<<< HEAD
         if (!preg_match('/^[a-z0-9\-]{36}$/', $chunkid)) {
             throw new UploadException(__('Invalid parameters'));
         }
 
+=======
+>>>>>>> fastadmin/master
         $filePath = $this->chunkDir . DS . $chunkid;
 
         $completed = true;
@@ -237,6 +246,7 @@ class Upload
         }
         @fclose($destFile);
 
+<<<<<<< HEAD
         $attachment = null;
         try {
             $file = new File($uploadPath);
@@ -265,6 +275,29 @@ class Upload
             throw new UploadException($e->getMessage());
         }
         return $attachment;
+=======
+        $file = new File($uploadPath);
+        $info = [
+            'name'     => $filename,
+            'type'     => $file->getMime(),
+            'tmp_name' => $uploadPath,
+            'error'    => 0,
+            'size'     => $file->getSize()
+        ];
+        $file->setSaveName($filename)->setUploadInfo($info);
+        $file->isTest(true);
+
+        //重新设置文件
+        $this->setFile($file);
+
+        unset($file);
+        $this->merging = true;
+
+        //允许大文件
+        $this->config['maxsize'] = "1024G";
+
+        return $this->upload();
+>>>>>>> fastadmin/master
     }
 
     /**
@@ -278,10 +311,13 @@ class Upload
             throw new UploadException(__('Uploaded file format is limited'));
         }
 
+<<<<<<< HEAD
         if (!preg_match('/^[a-z0-9\-]{36}$/', $chunkid)) {
             throw new UploadException(__('Invalid parameters'));
         }
 
+=======
+>>>>>>> fastadmin/master
         $destDir = RUNTIME_PATH . 'chunks';
         $fileName = $chunkid . "-" . $chunkindex . '.part';
         $destFile = $destDir . DS . $fileName;
@@ -292,6 +328,7 @@ class Upload
             throw new UploadException(__('Chunk file write error'));
         }
         $file = new File($destFile);
+<<<<<<< HEAD
         $info = [
             'name'     => $fileName,
             'type'     => $file->getMime(),
@@ -300,6 +337,8 @@ class Upload
             'size'     => $file->getSize()
         ];
         $file->setSaveName($fileName)->setUploadInfo($info);
+=======
+>>>>>>> fastadmin/master
         $this->setFile($file);
         return $file;
     }
