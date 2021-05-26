@@ -18,21 +18,9 @@ return [
     // 应用命名空间
     'app_namespace'          => 'app',
     // 应用调试模式
-<<<<<<< HEAD
-<<<<<<< HEAD
     'app_debug'              => Env::get('app.debug', true),
     // 应用Trace
     'app_trace'              => Env::get('app.trace', true),
-=======
-    'app_debug'              => Env::get('app.debug', false),
-    // 应用Trace
-    'app_trace'              => Env::get('app.trace', false),
->>>>>>> fastadmin/master
-=======
-    'app_debug'              => Env::get('app.debug', false),
-    // 应用Trace
-    'app_trace'              => Env::get('app.trace', false),
->>>>>>> fastadmin/master
     // 应用模式状态
     'app_status'             => '',
     // 是否支持多模块
@@ -63,14 +51,8 @@ return [
     'class_suffix'           => false,
     // 控制器类后缀
     'controller_suffix'      => false,
-<<<<<<< HEAD
-<<<<<<< HEAD
     // 获取IP的变量
     'http_agent_ip'          => 'REMOTE_ADDR',
-=======
->>>>>>> fastadmin/master
-=======
->>>>>>> fastadmin/master
     // +----------------------------------------------------------------------
     // | 模块设置
     // +----------------------------------------------------------------------
@@ -310,15 +292,7 @@ return [
         //允许跨域的域名,多个以,分隔
         'cors_request_domain'   => 'localhost,127.0.0.1',
         //版本号
-<<<<<<< HEAD
-<<<<<<< HEAD
         'version'               => '1.2.0.20210401_beta',
-=======
-        'version'               => '1.2.0.20201008_beta',
->>>>>>> fastadmin/master
-=======
-        'version'               => '1.2.0.20201008_beta',
->>>>>>> fastadmin/master
         //API接口地址
         'api_url'               => 'https://api.fastadmin.net',
     ],
