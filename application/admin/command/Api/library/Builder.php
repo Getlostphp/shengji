@@ -44,11 +44,17 @@ class Builder
             }
             Extractor::getClassMethodAnnotations($class);
 <<<<<<< HEAD
+<<<<<<< HEAD
             //Extractor::getClassPropertyValues($class);
         }
         $allClassAnnotation = Extractor::getAllClassAnnotations();
         $allClassMethodAnnotation = Extractor::getAllClassMethodAnnotations();
         //$allClassPropertyValue = Extractor::getAllClassPropertyValues();
+=======
+        }
+        $allClassAnnotation = Extractor::getAllClassAnnotations();
+        $allClassMethodAnnotation = Extractor::getAllClassMethodAnnotations();
+>>>>>>> fastadmin/master
 =======
         }
         $allClassAnnotation = Extractor::getAllClassAnnotations();
@@ -171,6 +177,7 @@ class Builder
 
         $sectorArr = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
         foreach ($allClassAnnotations as $index => &$allClassAnnotation) {
             // 如果设置隐藏，则不显示在文档
             if (isset($allClassAnnotation['ApiInternal'])) {
@@ -182,10 +189,15 @@ class Builder
         unset($allClassAnnotation);
 
 =======
+=======
+>>>>>>> fastadmin/master
         foreach ($allClassAnnotations as $index => $allClassAnnotation) {
             $sector = isset($allClassAnnotation['ApiSector']) ? $allClassAnnotation['ApiSector'][0] : $allClassAnnotation['ApiTitle'][0];
             $sectorArr[$sector] = isset($allClassAnnotation['ApiWeigh']) ? $allClassAnnotation['ApiWeigh'][0] : 0;
         }
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
         arsort($sectorArr);
         $routes = include_once CONF_PATH . 'route.php';
@@ -197,7 +209,11 @@ class Builder
         $section = null;
         $weigh = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
         $docsList = [];
+=======
+        $docslist = [];
+>>>>>>> fastadmin/master
 =======
         $docslist = [];
 >>>>>>> fastadmin/master
@@ -215,6 +231,7 @@ class Builder
                 if ($subdomain) {
                     $route = substr($route, 4);
                 }
+<<<<<<< HEAD
 <<<<<<< HEAD
                 $docsList[$section][$name] = [
                     'id'                 => $counter,
@@ -234,6 +251,8 @@ class Builder
                     'needLogin' => $docs['ApiPermissionLogin'][0],
                     'needRight' => $docs['ApiPermissionRight'][0],
 =======
+=======
+>>>>>>> fastadmin/master
                 $docslist[$section][$class . $name] = [
                     'id'                => $counter,
                     'method'            => is_array($docs['ApiMethod'][0]) ? $docs['ApiMethod'][0]['data'] : $docs['ApiMethod'][0],
@@ -249,6 +268,9 @@ class Builder
                     'returnparamslist'  => $this->generateReturnParamsTemplate($docs),
                     'weigh'             => is_array($docs['ApiWeigh'][0]) ? $docs['ApiWeigh'][0]['data'] : $docs['ApiWeigh'][0],
                     'return'            => isset($docs['ApiReturn']) ? is_array($docs['ApiReturn'][0]) ? $docs['ApiReturn'][0]['data'] : $docs['ApiReturn'][0] : '',
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
                 ];
                 $counter++;
@@ -257,7 +279,11 @@ class Builder
 
         //重建排序
 <<<<<<< HEAD
+<<<<<<< HEAD
         foreach ($docsList as $index => &$methods) {
+=======
+        foreach ($docslist as $index => &$methods) {
+>>>>>>> fastadmin/master
 =======
         foreach ($docslist as $index => &$methods) {
 >>>>>>> fastadmin/master
@@ -269,8 +295,14 @@ class Builder
             $methods = array_merge(array_flip(array_keys($methodSectorArr)), $methods);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         $docsList = array_merge(array_flip(array_keys($sectorArr)), $docsList);
         return $docsList;
+=======
+        $docslist = array_merge(array_flip(array_keys($sectorArr)), $docslist);
+        $docslist = array_filter($docslist , function($v) {return is_array($v) ; }) ;
+        return $docslist;
+>>>>>>> fastadmin/master
 =======
         $docslist = array_merge(array_flip(array_keys($sectorArr)), $docslist);
         $docslist = array_filter($docslist , function($v) {return is_array($v) ; }) ;
@@ -292,9 +324,15 @@ class Builder
     public function render($template, $vars = [])
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $docsList = $this->parse();
 
         return $this->view->display(file_get_contents($template), array_merge($vars, ['docsList' => $docsList]));
+=======
+        $docslist = $this->parse();
+
+        return $this->view->display(file_get_contents($template), array_merge($vars, ['docslist' => $docslist]));
+>>>>>>> fastadmin/master
 =======
         $docslist = $this->parse();
 

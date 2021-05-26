@@ -141,10 +141,16 @@ define(['jquery', 'bootstrap', 'frontend', 'form', 'template'], function ($, und
                     columns: [
                         [
 <<<<<<< HEAD
+<<<<<<< HEAD
                             {field: 'state', checkbox: multiple, visible: multiple, operate: false},
                             {field: 'id', title: __('Id'), operate: false},
                             {
                                 field: 'url', title: __('Preview'), formatter: function (value, row, index) {
+=======
+                            {field: 'state', checkbox: multiple, visible: multiple, operate:false},
+                            {field: 'id', title: __('Id')},
+                            {field: 'url', title: __('Preview'), formatter: function (value, row, index) {
+>>>>>>> fastadmin/master
 =======
                             {field: 'state', checkbox: multiple, visible: multiple, operate:false},
                             {field: 'id', title: __('Id')},
@@ -157,6 +163,7 @@ define(['jquery', 'bootstrap', 'frontend', 'form', 'template'], function ($, und
                                         return '<a href="' + row.fullurl + '" target="_blank"><img src="' + Fast.api.fixurl("ajax/icon") + "?suffix=" + row.imagetype + '" alt="" style="max-height:90px;max-width:120px"></a>';
                                     }
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 }, operate: false
                             },
                             {field: 'filename', title: __('Filename'), formatter: Table.api.formatter.search, operate: 'like'},
@@ -164,6 +171,8 @@ define(['jquery', 'bootstrap', 'frontend', 'form', 'template'], function ($, und
                             {field: 'imageheight', title: __('Imageheight'), operate: false},
                             {field: 'mimetype', title: __('Mimetype'), formatter: Table.api.formatter.search},
 =======
+=======
+>>>>>>> fastadmin/master
                                 }, operate: false},
                             {field: 'filename', title: __('Filename'), formatter: Table.api.formatter.search, operate: 'like'},
                             {field: 'imagewidth', title: __('Imagewidth'), operate: false},
@@ -174,6 +183,9 @@ define(['jquery', 'bootstrap', 'frontend', 'form', 'template'], function ($, und
                                     return value.replace(/\*/g, '%');
                                 }
                             },
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
                             {field: 'createtime', title: __('Createtime'), formatter: Table.api.formatter.datetime, operate: 'RANGE', addclass: 'datetimerange', sortable: true},
                             {

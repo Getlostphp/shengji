@@ -1,5 +1,6 @@
 define([], function () {
 <<<<<<< HEAD
+<<<<<<< HEAD
     require.config({
     paths: {
         'async': '../addons/example/js/async',
@@ -13,6 +14,9 @@ define([], function () {
     }
 });
 
+=======
+    
+>>>>>>> fastadmin/master
 =======
     
 >>>>>>> fastadmin/master

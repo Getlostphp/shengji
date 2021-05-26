@@ -49,9 +49,12 @@ class Frontend extends Controller
         $actionname = strtolower($this->request->action());
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // 检测IP是否允许
         check_ip_allowed();
 
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
         // 如果有使用模板布局

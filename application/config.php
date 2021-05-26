@@ -19,9 +19,15 @@ return [
     'app_namespace'          => 'app',
     // 应用调试模式
 <<<<<<< HEAD
+<<<<<<< HEAD
     'app_debug'              => Env::get('app.debug', true),
     // 应用Trace
     'app_trace'              => Env::get('app.trace', true),
+=======
+    'app_debug'              => Env::get('app.debug', false),
+    // 应用Trace
+    'app_trace'              => Env::get('app.trace', false),
+>>>>>>> fastadmin/master
 =======
     'app_debug'              => Env::get('app.debug', false),
     // 应用Trace
@@ -58,8 +64,11 @@ return [
     // 控制器类后缀
     'controller_suffix'      => false,
 <<<<<<< HEAD
+<<<<<<< HEAD
     // 获取IP的变量
     'http_agent_ip'          => 'REMOTE_ADDR',
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
     // +----------------------------------------------------------------------
@@ -302,7 +311,11 @@ return [
         'cors_request_domain'   => 'localhost,127.0.0.1',
         //版本号
 <<<<<<< HEAD
+<<<<<<< HEAD
         'version'               => '1.2.0.20210401_beta',
+=======
+        'version'               => '1.2.0.20201008_beta',
+>>>>>>> fastadmin/master
 =======
         'version'               => '1.2.0.20201008_beta',
 >>>>>>> fastadmin/master

@@ -71,8 +71,13 @@ return [
     'Add new config'              => '点击添加新的配置',
     'Send a test message'         => '发送测试邮件',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'This is a test mail content' => '这是一封来自%s的校验邮件,用于校验邮件配置是否正常!',
     'This is a test mail'         => '这是一封来自%s的邮件',
+=======
+    'This is a test mail content' => '这是一封来自FastAdmin校验邮件,用于校验邮件配置是否正常!',
+    'This is a test mail'         => '这是一封来自FastAdmin的邮件',
+>>>>>>> fastadmin/master
 =======
     'This is a test mail content' => '这是一封来自FastAdmin校验邮件,用于校验邮件配置是否正常!',
     'This is a test mail'         => '这是一封来自FastAdmin的邮件',

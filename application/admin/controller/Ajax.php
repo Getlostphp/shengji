@@ -113,6 +113,10 @@ class Ajax extends Backend
             $this->success(__('Uploaded successful'), '', ['url' => $attachment->url, 'fullurl' => cdnurl($attachment->url, true)]);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> fastadmin/master
 =======
 
 >>>>>>> fastadmin/master
@@ -191,6 +195,7 @@ class Ajax extends Backend
     public function wipecache()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         try {
             $type = $this->request->request("type");
             switch ($type) {
@@ -242,6 +247,8 @@ class Ajax extends Backend
         } catch (\Exception $e) {
             $this->error($e->getMessage());
 =======
+=======
+>>>>>>> fastadmin/master
         $type = $this->request->request("type");
         switch ($type) {
             case 'all':
@@ -261,6 +268,9 @@ class Ajax extends Backend
                 if ($type == 'addons') {
                     break;
                 }
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
         }
 

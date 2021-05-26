@@ -16,6 +16,9 @@ composer.lock
 .svn
 .vscode
 <<<<<<< HEAD
+<<<<<<< HEAD
 node_modules
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master

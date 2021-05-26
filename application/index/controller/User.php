@@ -66,7 +66,11 @@ class User extends Frontend
     public function register()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $url = $this->request->request('url', '', 'trim');
+=======
+        $url = $this->request->request('url', '');
+>>>>>>> fastadmin/master
 =======
         $url = $this->request->request('url', '');
 >>>>>>> fastadmin/master
@@ -149,7 +153,11 @@ class User extends Frontend
     public function login()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $url = $this->request->request('url', '', 'trim');
+=======
+        $url = $this->request->request('url', '');
+>>>>>>> fastadmin/master
 =======
         $url = $this->request->request('url', '');
 >>>>>>> fastadmin/master
@@ -276,7 +284,10 @@ class User extends Frontend
         if ($this->request->isAjax()) {
             $mimetypeQuery = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
             $where = [];
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
             $filter = $this->request->request('filter');
@@ -294,6 +305,7 @@ class User extends Frontend
                     }
                 };
 <<<<<<< HEAD
+<<<<<<< HEAD
             } elseif (isset($filterArr['mimetype'])) {
                 $where['mimetype'] = ['like', '%' . $filterArr['mimetype'] . '%'];
             }
@@ -310,12 +322,18 @@ class User extends Frontend
 =======
             }
 >>>>>>> fastadmin/master
+=======
+            }
+>>>>>>> fastadmin/master
             $model = new Attachment();
             $offset = $this->request->get("offset", 0);
             $limit = $this->request->get("limit", 0);
             $total = $model
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ->where($where)
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
                 ->where($mimetypeQuery)
@@ -325,7 +343,10 @@ class User extends Frontend
 
             $list = $model
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ->where($where)
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
                 ->where($mimetypeQuery)

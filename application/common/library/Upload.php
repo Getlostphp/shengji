@@ -77,7 +77,10 @@ class Upload
         $this->file = $file;
         $this->fileInfo = $fileInfo;
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->checkExecutable();
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
     }
@@ -176,9 +179,12 @@ class Upload
     public function clean($chunkid)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!preg_match('/^[a-z0-9\-]{36}$/', $chunkid)) {
             throw new UploadException(__('Invalid parameters'));
         }
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
         $iterator = new \GlobIterator($this->chunkDir . DS . $chunkid . '-*', FilesystemIterator::KEY_AS_FILENAME);
@@ -201,10 +207,13 @@ class Upload
     public function merge($chunkid, $chunkcount, $filename)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!preg_match('/^[a-z0-9\-]{36}$/', $chunkid)) {
             throw new UploadException(__('Invalid parameters'));
         }
 
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
         $filePath = $this->chunkDir . DS . $chunkid;
@@ -247,6 +256,7 @@ class Upload
         @fclose($destFile);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $attachment = null;
         try {
             $file = new File($uploadPath);
@@ -276,6 +286,8 @@ class Upload
         }
         return $attachment;
 =======
+=======
+>>>>>>> fastadmin/master
         $file = new File($uploadPath);
         $info = [
             'name'     => $filename,
@@ -297,6 +309,9 @@ class Upload
         $this->config['maxsize'] = "1024G";
 
         return $this->upload();
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
     }
 
@@ -312,10 +327,13 @@ class Upload
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!preg_match('/^[a-z0-9\-]{36}$/', $chunkid)) {
             throw new UploadException(__('Invalid parameters'));
         }
 
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
         $destDir = RUNTIME_PATH . 'chunks';
@@ -329,6 +347,7 @@ class Upload
         }
         $file = new File($destFile);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $info = [
             'name'     => $fileName,
             'type'     => $file->getMime(),
@@ -337,6 +356,8 @@ class Upload
             'size'     => $file->getSize()
         ];
         $file->setSaveName($fileName)->setUploadInfo($info);
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
         $this->setFile($file);

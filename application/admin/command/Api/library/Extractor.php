@@ -25,8 +25,11 @@ class Extractor
     private static $classMethodAnnotationCache;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private static $classPropertyValueCache;
 
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
     /**
@@ -72,7 +75,11 @@ class Extractor
      * Gets all anotations with pattern @SomeAnnotation() from a given class
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string $className class name to get annotations
+=======
+     * @param  string $className class name to get annotations
+>>>>>>> fastadmin/master
 =======
      * @param  string $className class name to get annotations
 >>>>>>> fastadmin/master
@@ -83,9 +90,13 @@ class Extractor
         if (!isset(self::$classAnnotationCache[$className])) {
             $class = new \ReflectionClass($className);
 <<<<<<< HEAD
+<<<<<<< HEAD
             $annotationArr = self::parseAnnotations($class->getDocComment());
             $annotationArr['ApiTitle'] = !isset($annotationArr['ApiTitle'][0]) || !trim($annotationArr['ApiTitle'][0]) ? [$class->getShortName()] : $annotationArr['ApiTitle'];
             self::$classAnnotationCache[$className] = $annotationArr;
+=======
+            self::$classAnnotationCache[$className] = self::parseAnnotations($class->getDocComment());
+>>>>>>> fastadmin/master
 =======
             self::$classAnnotationCache[$className] = self::parseAnnotations($class->getDocComment());
 >>>>>>> fastadmin/master
@@ -112,6 +123,7 @@ class Extractor
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function getClassPropertyValues($className)
     {
         $class = new \ReflectionClass($className);
@@ -125,6 +137,8 @@ class Extractor
 
 =======
 >>>>>>> fastadmin/master
+=======
+>>>>>>> fastadmin/master
     public static function getAllClassAnnotations()
     {
         return self::$classAnnotationCache;
@@ -135,6 +149,7 @@ class Extractor
         return self::$classMethodAnnotationCache;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public static function getAllClassPropertyValues()
     {
@@ -156,11 +171,16 @@ class Extractor
      * @param string $className  class name
      * @param string $methodName method name to get annotations
 =======
+=======
+>>>>>>> fastadmin/master
     /**
      * Gets all anotations with pattern @SomeAnnotation() from a determinated method of a given class
      *
      * @param  string $className class name
      * @param  string $methodName method name to get annotations
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
      * @return array  self::$annotationCache all annotated elements of a method given
      */
@@ -190,8 +210,13 @@ class Extractor
      * and instance its abcAnnotation class
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string $className  class name
      * @param string $methodName method name to get annotations
+=======
+     * @param  string $className class name
+     * @param  string $methodName method name to get annotations
+>>>>>>> fastadmin/master
 =======
      * @param  string $className class name
      * @param  string $methodName method name to get annotations
@@ -246,11 +271,15 @@ class Extractor
 
         $methodAnnotations = self::parseAnnotations($docblockMethod);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $methodAnnotations['ApiTitle'] = !isset($methodAnnotations['ApiTitle'][0]) || !trim($methodAnnotations['ApiTitle'][0]) ? [$method->getName()] : $methodAnnotations['ApiTitle'];
 
         $classAnnotations = self::parseAnnotations($dockblockClass);
         $classAnnotations['ApiTitle'] = !isset($classAnnotations['ApiTitle'][0]) || !trim($classAnnotations['ApiTitle'][0]) ? [$class->getShortName()] : $classAnnotations['ApiTitle'];
 
+=======
+        $classAnnotations = self::parseAnnotations($dockblockClass);
+>>>>>>> fastadmin/master
 =======
         $classAnnotations = self::parseAnnotations($dockblockClass);
 >>>>>>> fastadmin/master
@@ -329,7 +358,11 @@ class Extractor
         }
         $methodAnnotations['ApiPermissionLogin'] = [!in_array('*', $noNeedLogin) && !in_array($methodName, $noNeedLogin)];
 <<<<<<< HEAD
+<<<<<<< HEAD
         $methodAnnotations['ApiPermissionRight'] = !$methodAnnotations['ApiPermissionLogin'][0] ? false : [!in_array('*', $noNeedRight) && !in_array($methodName, $noNeedRight)];
+=======
+        $methodAnnotations['ApiPermissionRight'] = [!in_array('*', $noNeedRight) && !in_array($methodName, $noNeedRight)];
+>>>>>>> fastadmin/master
 =======
         $methodAnnotations['ApiPermissionRight'] = [!in_array('*', $noNeedRight) && !in_array($methodName, $noNeedRight)];
 >>>>>>> fastadmin/master
@@ -340,8 +373,13 @@ class Extractor
      * Parse annotations
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string $docblock
      * @param string $name
+=======
+     * @param  string $docblock
+     * @param  string $name
+>>>>>>> fastadmin/master
 =======
      * @param  string $docblock
      * @param  string $name
@@ -365,7 +403,11 @@ class Extractor
      * Parse annotations
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string $docblock
+=======
+     * @param  string $docblock
+>>>>>>> fastadmin/master
 =======
      * @param  string $docblock
 >>>>>>> fastadmin/master
@@ -415,7 +457,11 @@ class Extractor
      * Parse individual annotation arguments
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string $content arguments string
+=======
+     * @param  string $content arguments string
+>>>>>>> fastadmin/master
 =======
      * @param  string $content arguments string
 >>>>>>> fastadmin/master
@@ -562,8 +608,13 @@ class Extractor
      * Try determinate the original type variable of a string
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string  $val  string containing possibles variables that can be cast to bool or int
      * @param boolean $trim indicate if the value passed should be trimmed after to try cast
+=======
+     * @param  string $val string containing possibles variables that can be cast to bool or int
+     * @param  boolean $trim indicate if the value passed should be trimmed after to try cast
+>>>>>>> fastadmin/master
 =======
      * @param  string $val string containing possibles variables that can be cast to bool or int
      * @param  boolean $trim indicate if the value passed should be trimmed after to try cast

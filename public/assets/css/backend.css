@@ -24,10 +24,13 @@ body.is-dialog {
   background: #fff;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .dropdown-menu > li > a {
   font-size: 13px;
   padding: 5px 12px;
 }
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
 .selection {
@@ -39,12 +42,15 @@ body.is-dialog {
   position: relative;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .main-header .navbar .dropdown-menu {
   font-size: 13px;
 }
 .main-header .navbar .dropdown-menu > li > a {
   padding: 5px 20px;
 }
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
 .bootstrap-dialog .modal-dialog {

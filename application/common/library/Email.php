@@ -4,9 +4,12 @@ namespace app\common\library;
 
 use think\Config;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Tx\Mailer;
 use Tx\Mailer\Exceptions\CodeException;
 use Tx\Mailer\Exceptions\SendException;
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
 
@@ -27,7 +30,11 @@ class Email
      * 错误内容
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected $error = '';
+=======
+    protected $_error = '';
+>>>>>>> fastadmin/master
 =======
     protected $_error = '';
 >>>>>>> fastadmin/master
@@ -37,9 +44,14 @@ class Email
      */
     public $options = [
 <<<<<<< HEAD
+<<<<<<< HEAD
         'charset'   => 'utf-8', //编码格式
         'debug'     => false, //调式模式
         'mail_type' => 0, //状态
+=======
+        'charset' => 'utf-8', //编码格式
+        'debug'   => false, //调式模式
+>>>>>>> fastadmin/master
 =======
         'charset' => 'utf-8', //编码格式
         'debug'   => false, //调式模式
@@ -72,6 +84,7 @@ class Email
         }
         $this->options = array_merge($this->options, $options);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $secureArr = [0 => '', 1 => 'tls', 2 => 'ssl'];
         $secure = isset($secureArr[$this->options['mail_verify_type']]) ? $secureArr[$this->options['mail_verify_type']] : '';
 
@@ -80,6 +93,8 @@ class Email
         $this->mail->setServer($this->options['mail_smtp_host'], $this->options['mail_smtp_port'], $secure);
         $this->mail->setAuth($this->options['mail_from'], $this->options['mail_smtp_pass']);
 =======
+=======
+>>>>>>> fastadmin/master
         $securArr = [1 => 'tls', 2 => 'ssl'];
 
         $this->mail = new \PHPMailer\PHPMailer\PHPMailer(true);
@@ -96,6 +111,9 @@ class Email
         $this->mail->Password = $this->options['mail_smtp_pass'];
         $this->mail->SMTPSecure = isset($securArr[$this->options['mail_verify_type']]) ? $securArr[$this->options['mail_verify_type']] : '';
         $this->mail->Port = $this->options['mail_smtp_port'];
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
 
         //设置发件人
@@ -110,7 +128,11 @@ class Email
     public function subject($subject)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->mail->setSubject($subject);
+=======
+        $this->mail->Subject = $subject;
+>>>>>>> fastadmin/master
 =======
         $this->mail->Subject = $subject;
 >>>>>>> fastadmin/master
@@ -126,7 +148,11 @@ class Email
     public function from($email, $name = '')
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->mail->setFrom($name, $email);
+=======
+        $this->mail->setFrom($email, $name);
+>>>>>>> fastadmin/master
 =======
         $this->mail->setFrom($email, $name);
 >>>>>>> fastadmin/master
@@ -137,6 +163,7 @@ class Email
      * 设置收件人
      * @param mixed  $email 收件人,多个收件人以,进行分隔
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return $this
      */
     public function to($email)
@@ -145,6 +172,8 @@ class Email
         foreach ($emailArr as $address => $name) {
             $this->mail->addTo($name, $address);
 =======
+=======
+>>>>>>> fastadmin/master
      * @param string $name  收件人名称
      * @return $this
      */
@@ -153,6 +182,9 @@ class Email
         $emailArr = $this->buildAddress($email);
         foreach ($emailArr as $address => $name) {
             $this->mail->addAddress($address, $name);
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
         }
 
@@ -169,9 +201,12 @@ class Email
     {
         $emailArr = $this->buildAddress($email);
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (count($emailArr) == 1 && $name) {
             $emailArr[key($emailArr)] = $name;
         }
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
         foreach ($emailArr as $address => $name) {
@@ -190,11 +225,16 @@ class Email
     {
         $emailArr = $this->buildAddress($email);
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (count($emailArr) == 1 && $name) {
             $emailArr[key($emailArr)] = $name;
         }
         foreach ($emailArr as $address => $name) {
             $this->mail->addBCC($name, $address);
+=======
+        foreach ($emailArr as $address => $name) {
+            $this->mail->addBCC($address, $name);
+>>>>>>> fastadmin/master
 =======
         foreach ($emailArr as $address => $name) {
             $this->mail->addBCC($address, $name);
@@ -212,13 +252,19 @@ class Email
     public function message($body, $ishtml = true)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->mail->setBody($body);
 =======
+=======
+>>>>>>> fastadmin/master
         if ($ishtml) {
             $this->mail->msgHTML($body);
         } else {
             $this->mail->Body = $body;
         }
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
         return $this;
     }
@@ -232,7 +278,11 @@ class Email
     public function attachment($path, $name = '')
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->mail->addAttachment($name, $path);
+=======
+        $this->mail->addAttachment($path, $name);
+>>>>>>> fastadmin/master
 =======
         $this->mail->addAttachment($path, $name);
 >>>>>>> fastadmin/master
@@ -247,6 +297,7 @@ class Email
     protected function buildAddress($emails)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!is_array($emails)) {
             $emails = array_flip(explode(',', str_replace(";", ",", $emails)));
             foreach ($emails as $key => $value) {
@@ -255,6 +306,8 @@ class Email
         }
         return $emails;
 =======
+=======
+>>>>>>> fastadmin/master
         $emails = is_array($emails) ? $emails : explode(',', str_replace(";", ",", $emails));
         $result = [];
         foreach ($emails as $key => $value) {
@@ -262,6 +315,9 @@ class Email
             $result[$email] = is_numeric($key) ? "" : $value;
         }
         return $result;
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
     }
 
@@ -272,7 +328,11 @@ class Email
     public function getError()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $this->error;
+=======
+        return $this->_error;
+>>>>>>> fastadmin/master
 =======
         return $this->_error;
 >>>>>>> fastadmin/master
@@ -285,7 +345,11 @@ class Email
     protected function setError($error)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->error = $error;
+=======
+        $this->_error = $error;
+>>>>>>> fastadmin/master
 =======
         $this->_error = $error;
 >>>>>>> fastadmin/master
@@ -302,6 +366,7 @@ class Email
             try {
                 $result = $this->mail->send();
 <<<<<<< HEAD
+<<<<<<< HEAD
             } catch (SendException $e) {
                 $this->setError($e->getCode() . $e->getMessage());
             } catch (CodeException $e) {
@@ -315,11 +380,16 @@ class Email
 
             $this->setError($result ? '' : $this->getError());
 =======
+=======
+>>>>>>> fastadmin/master
             } catch (\PHPMailer\PHPMailer\Exception $e) {
                 $this->setError($e->getMessage());
             }
 
             $this->setError($result ? '' : $this->mail->ErrorInfo);
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
         } else {
             //邮件功能已关闭

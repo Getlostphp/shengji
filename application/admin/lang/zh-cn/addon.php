@@ -26,7 +26,11 @@ return [
     'Online installed tips'                                   => '安装成功！清除浏览器缓存和框架缓存后生效！',
     'Not login tips'                                          => '你当前未登录FastAdmin，登录后将同步已购买的记录，下载时无需二次付费！',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Please login and try to install'                         => '请登录FastAdmin后再进行离线安装！',
+=======
+    'Please login and try to install'                         => '请登录后再进行离线安装！',
+>>>>>>> fastadmin/master
 =======
     'Please login and try to install'                         => '请登录后再进行离线安装！',
 >>>>>>> fastadmin/master

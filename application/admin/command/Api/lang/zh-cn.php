@@ -17,9 +17,12 @@ return [
     'Apiurltips'       => 'API接口URL',
     'Savetips'         => '点击保存后Token和Api url都将保存在本地Localstorage中',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Authorization'    => '权限',
     'NeedLogin'        => '登录',
     'NeedRight'        => '鉴权',
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
     'ReturnHeaders'    => '响应头',

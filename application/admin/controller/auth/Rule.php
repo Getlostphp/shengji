@@ -32,7 +32,11 @@ class Rule extends Backend
         $this->model = model('AuthRule');
         // 必须将结果集转换为数组
 <<<<<<< HEAD
+<<<<<<< HEAD
         $ruleList = \think\Db::name("auth_rule")->field('type,condition,remark,createtime,updatetime', true)->order('weigh DESC,id ASC')->select();
+=======
+        $ruleList = collection($this->model->field('condition,remark,createtime,updatetime', true)->order('weigh DESC,id ASC')->select())->toArray();
+>>>>>>> fastadmin/master
 =======
         $ruleList = collection($this->model->field('condition,remark,createtime,updatetime', true)->order('weigh DESC,id ASC')->select())->toArray();
 >>>>>>> fastadmin/master
@@ -49,11 +53,17 @@ class Rule extends Backend
             }
             $ruledata[$v['id']] = $v['title'];
 <<<<<<< HEAD
+<<<<<<< HEAD
             unset($v['spacer']);
         }
         unset($v);
         $this->view->assign('ruledata', $ruledata);
         $this->view->assign("menutypeList", $this->model->getMenutypeList());
+=======
+        }
+        unset($v);
+        $this->view->assign('ruledata', $ruledata);
+>>>>>>> fastadmin/master
 =======
         }
         unset($v);
@@ -70,6 +80,10 @@ class Rule extends Backend
             $list = $this->rulelist;
             $total = count($this->rulelist);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> fastadmin/master
 =======
 
 >>>>>>> fastadmin/master
@@ -121,9 +135,12 @@ class Rule extends Backend
                     $this->error(__('The non-menu rule must have parent'));
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
                 if ($params['pid'] == $row['id']) {
                     $this->error(__('Can not change the parent to self'));
                 }
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
                 if ($params['pid'] != $row['pid']) {

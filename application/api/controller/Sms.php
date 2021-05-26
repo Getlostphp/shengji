@@ -24,8 +24,13 @@ class Sms extends Api
     public function send()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $mobile = $this->request->post("mobile");
         $event = $this->request->post("event");
+=======
+        $mobile = $this->request->request("mobile");
+        $event = $this->request->request("event");
+>>>>>>> fastadmin/master
 =======
         $mobile = $this->request->request("mobile");
         $event = $this->request->request("event");
@@ -77,15 +82,21 @@ class Sms extends Api
     public function check()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $mobile = $this->request->post("mobile");
         $event = $this->request->post("event");
         $event = $event ? $event : 'register';
         $captcha = $this->request->post("captcha");
 =======
+=======
+>>>>>>> fastadmin/master
         $mobile = $this->request->request("mobile");
         $event = $this->request->request("event");
         $event = $event ? $event : 'register';
         $captcha = $this->request->request("captcha");
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
 
         if (!$mobile || !\think\Validate::regex($mobile, "^1\d{10}$")) {

@@ -31,9 +31,15 @@ body {
   font-size: 14px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .dropdown-menu > li > a {
   font-size: 13px;
   padding: 5px 20px;
+=======
+.navbar-nav ul.dropdown-menu > li > a {
+  padding: 5px 20px;
+  font-size: 13px;
+>>>>>>> fastadmin/master
 =======
 .navbar-nav ul.dropdown-menu > li > a {
   padding: 5px 20px;

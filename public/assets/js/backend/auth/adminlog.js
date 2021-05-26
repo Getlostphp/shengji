@@ -19,8 +19,11 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             table.bootstrapTable({
                 url: $.fn.bootstrapTable.defaults.extend.index_url,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 maintainSelected:true,
 
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
                 columns: [
@@ -49,10 +52,13 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $(document).on('click','.btn-del',function () {
                 var ids =   Table.api.selectedids(table);
                 console.log(ids);
             })
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
             // 为表格绑定事件

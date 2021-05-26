@@ -26,9 +26,15 @@ class Date
      * <http://php.net/timezones>.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string $remote timezone that to find the offset of
      * @param string $local  timezone used as the baseline
      * @param mixed  $now    UNIX timestamp or date string
+=======
+     * @param   string $remote timezone that to find the offset of
+     * @param   string $local  timezone used as the baseline
+     * @param   mixed  $now    UNIX timestamp or date string
+>>>>>>> fastadmin/master
 =======
      * @param   string $remote timezone that to find the offset of
      * @param   string $local  timezone used as the baseline
@@ -64,9 +70,15 @@ class Date
      * $span = self::span(60, 182, 'minutes'); // 2
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param int    $remote timestamp to find the span of
      * @param int    $local  timestamp to use as the baseline
      * @param string $output formatting string
+=======
+     * @param   int    $remote timestamp to find the span of
+     * @param   int    $local  timestamp to use as the baseline
+     * @param   string $output formatting string
+>>>>>>> fastadmin/master
 =======
      * @param   int    $remote timestamp to find the span of
      * @param   int    $local  timestamp to use as the baseline
@@ -130,8 +142,13 @@ class Date
      * 格式化 UNIX 时间戳为人易读的字符串
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param int    Unix 时间戳
      * @param mixed $local 本地时间
+=======
+     * @param    int    Unix 时间戳
+     * @param    mixed $local 本地时间
+>>>>>>> fastadmin/master
 =======
      * @param    int    Unix 时间戳
      * @param    mixed $local 本地时间
@@ -185,8 +202,11 @@ class Date
         $position = in_array($position, array('begin', 'start', 'first', 'front'));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $baseTime = mktime(0, 0, 0, $month, $day, $year);
 
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
         switch ($type) {
@@ -200,6 +220,7 @@ class Date
                 $time = $position ? mktime(0, 0, 0, $month, $day + $offset, $year) : mktime(23, 59, 59, $month, $day + $offset, $year);
                 break;
             case 'week':
+<<<<<<< HEAD
 <<<<<<< HEAD
                 $weekIndex = date("w", $baseTime);
                 $time = $position ?
@@ -216,6 +237,8 @@ class Date
                     mktime(0, 0, 0, 1 + ((ceil(date('n', $baseTime) / 3) + $offset) - 1) * 3, 1, $year) :
                     mktime(23, 59, 59, (ceil(date('n', $baseTime) / 3) + $offset) * 3, cal_days_in_month(CAL_GREGORIAN, (ceil(date('n', $baseTime) / 3) + $offset) * 3, $year), $year);
 =======
+=======
+>>>>>>> fastadmin/master
                 $time = $position ?
                     mktime(0, 0, 0, $month, $day - date("w", mktime(0, 0, 0, $month, $day, $year)) + 1 - 7 * (-$offset), $year) :
                     mktime(23, 59, 59, $month, $day - date("w", mktime(0, 0, 0, $month, $day, $year)) + 7 - 7 * (-$offset), $year);
@@ -229,6 +252,9 @@ class Date
                 $time = $position ?
                     mktime(0, 0, 0, 1 + ((ceil(date('n', mktime(0, 0, 0, $month, $day, $year)) / 3) + $offset) - 1) * 3, 1, $year) :
                     mktime(23, 59, 59, (ceil(date('n', mktime(0, 0, 0, $month, $day, $year)) / 3) + $offset) * 3, cal_days_in_month(CAL_GREGORIAN, $_month, $year), $year);
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
                 break;
             case 'year':

@@ -24,9 +24,15 @@ class Api extends Command
             ->addOption('force', 'f', Option::VALUE_OPTIONAL, 'force override general file', false)
             ->addOption('title', 't', Option::VALUE_OPTIONAL, 'document title', $site['name'])
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->addOption('class', 'c', Option::VALUE_OPTIONAL | Option::VALUE_IS_ARRAY, 'extend class', null)
             ->addOption('language', 'l', Option::VALUE_OPTIONAL, 'language', 'zh-cn')
             ->addOption('addon', 'a', Option::VALUE_OPTIONAL, 'addon name', null)
+=======
+            ->addOption('author', 'a', Option::VALUE_OPTIONAL, 'document author', $site['name'])
+            ->addOption('class', 'c', Option::VALUE_OPTIONAL | Option::VALUE_IS_ARRAY, 'extend class', null)
+            ->addOption('language', 'l', Option::VALUE_OPTIONAL, 'language', 'zh-cn')
+>>>>>>> fastadmin/master
 =======
             ->addOption('author', 'a', Option::VALUE_OPTIONAL, 'document author', $site['name'])
             ->addOption('class', 'c', Option::VALUE_OPTIONAL | Option::VALUE_IS_ARRAY, 'extend class', null)
@@ -44,10 +50,13 @@ class Api extends Command
         $url = $input->getOption('url');
         $language = $input->getOption('language');
 <<<<<<< HEAD
+<<<<<<< HEAD
         $template = $input->getOption('template');
         if (!preg_match("/^([a-z0-9]+)\.html\$/i", $template)) {
             throw new Exception('template file not correct');
         }
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
         $language = $language ? $language : 'zh-cn';
@@ -65,7 +74,11 @@ class Api extends Command
         // 模板文件
         $template_dir = $apiDir . 'template' . DS;
 <<<<<<< HEAD
+<<<<<<< HEAD
         $template_file = $template_dir . $template;
+=======
+        $template_file = $template_dir . $input->getOption('template');
+>>>>>>> fastadmin/master
 =======
         $template_file = $template_dir . $input->getOption('template');
 >>>>>>> fastadmin/master
@@ -76,6 +89,7 @@ class Api extends Command
         $classes = $input->getOption('class');
         // 标题
         $title = $input->getOption('title');
+<<<<<<< HEAD
 <<<<<<< HEAD
         // 模块
         $module = $input->getOption('module');
@@ -93,12 +107,17 @@ class Api extends Command
             $moduleDir = APP_PATH . $module . DS;
         }
 =======
+=======
+>>>>>>> fastadmin/master
         // 作者
         $author = $input->getOption('author');
         // 模块
         $module = $input->getOption('module');
 
         $moduleDir = APP_PATH . $module . DS;
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
         if (!is_dir($moduleDir)) {
             throw new Exception('module not found');
@@ -117,10 +136,16 @@ class Api extends Command
             }
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         //控制器名
         $controller = $input->getOption('controller') ?: [];
         if (!$controller) {
+=======
+        //控制器名
+        $controller = $input->getOption('controller') ?: '';
+        if(!$controller) {
+>>>>>>> fastadmin/master
 =======
         //控制器名
         $controller = $input->getOption('controller') ?: '';
@@ -139,6 +164,7 @@ class Api extends Command
                 }
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
         } else {
             foreach ($controller as $index => $item) {
                 $filePath = $moduleDir . Config::get('url_controller_layer') . DS . $item . '.php';
@@ -147,6 +173,8 @@ class Api extends Command
         }
 
 =======
+=======
+>>>>>>> fastadmin/master
         }
         else{
             foreach ($controller as $index => $item) {
@@ -154,6 +182,9 @@ class Api extends Command
                 $classes[] = $this->get_class_from_file($filePath);
             }
         }
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
         $classes = array_unique(array_filter($classes));
 
@@ -161,7 +192,11 @@ class Api extends Command
             'sitename'    => config('site.name'),
             'title'       => $title,
 <<<<<<< HEAD
+<<<<<<< HEAD
             'author'      => config('site.name'),
+=======
+            'author'      => $author,
+>>>>>>> fastadmin/master
 =======
             'author'      => $author,
 >>>>>>> fastadmin/master
@@ -170,12 +205,18 @@ class Api extends Command
             'language'    => $language,
         ];
 <<<<<<< HEAD
+<<<<<<< HEAD
         try {
             $builder = new Builder($classes);
             $content = $builder->render($template_file, ['config' => $config, 'lang' => $lang]);
         } catch (\Exception $e) {
             print_r($e);
         }
+=======
+        $builder = new Builder($classes);
+        $content = $builder->render($template_file, ['config' => $config, 'lang' => $lang]);
+
+>>>>>>> fastadmin/master
 =======
         $builder = new Builder($classes);
         $content = $builder->render($template_file, ['config' => $config, 'lang' => $lang]);

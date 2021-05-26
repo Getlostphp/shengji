@@ -122,7 +122,11 @@ require.config({
         }
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
     waitSeconds: 60,
+=======
+    waitSeconds: 30,
+>>>>>>> fastadmin/master
 =======
     waitSeconds: 30,
 >>>>>>> fastadmin/master

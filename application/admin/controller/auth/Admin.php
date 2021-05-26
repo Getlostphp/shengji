@@ -8,7 +8,10 @@ use app\common\controller\Backend;
 use fast\Random;
 use fast\Tree;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use think\Db;
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
 use think\Validate;
@@ -17,7 +20,11 @@ use think\Validate;
  * 管理员管理
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @icon   fa fa-users
+=======
+ * @icon fa fa-users
+>>>>>>> fastadmin/master
 =======
  * @icon fa fa-users
 >>>>>>> fastadmin/master
@@ -41,8 +48,13 @@ class Admin extends Backend
         $this->model = model('Admin');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->childrenAdminIds = $this->auth->getChildrenAdminIds($this->auth->isSuperAdmin());
         $this->childrenGroupIds = $this->auth->getChildrenGroupIds($this->auth->isSuperAdmin());
+=======
+        $this->childrenAdminIds = $this->auth->getChildrenAdminIds(true);
+        $this->childrenGroupIds = $this->auth->getChildrenGroupIds(true);
+>>>>>>> fastadmin/master
 =======
         $this->childrenAdminIds = $this->auth->getChildrenAdminIds(true);
         $this->childrenGroupIds = $this->auth->getChildrenGroupIds(true);
@@ -136,6 +148,7 @@ class Admin extends Backend
             $params = $this->request->post("row/a");
             if ($params) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 Db::startTrans();
                 try {
                     if (!Validate::is($params['password'], '\S{6,16}')) {
@@ -170,6 +183,8 @@ class Admin extends Backend
             }
             $this->error(__('Parameter %s can not be empty', ''));
 =======
+=======
+>>>>>>> fastadmin/master
                 if (!Validate::is($params['password'], '\S{6,16}')) {
                     $this->error(__("Please input correct password"));
                 }
@@ -192,6 +207,9 @@ class Admin extends Backend
                 $this->success();
             }
             $this->error();
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
         }
         return $this->view->fetch();
@@ -213,6 +231,7 @@ class Admin extends Backend
             $this->token();
             $params = $this->request->post("row/a");
             if ($params) {
+<<<<<<< HEAD
 <<<<<<< HEAD
                 Db::startTrans();
                 try {
@@ -262,6 +281,8 @@ class Admin extends Backend
             }
             $this->error(__('Parameter %s can not be empty', ''));
 =======
+=======
+>>>>>>> fastadmin/master
                 if ($params['password']) {
                     if (!Validate::is($params['password'], '\S{6,16}')) {
                         $this->error(__("Please input correct password"));
@@ -299,6 +320,9 @@ class Admin extends Backend
                 $this->success();
             }
             $this->error();
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
         }
         $grouplist = $this->auth->getGroups($row['id']);
@@ -335,6 +359,7 @@ class Admin extends Backend
                 $deleteIds = array_values(array_diff($deleteIds, [$this->auth->id]));
                 if ($deleteIds) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     Db::startTrans();
                     try {
                         $this->model->destroy($deleteIds);
@@ -348,10 +373,15 @@ class Admin extends Backend
                 }
                 $this->error(__('No rows were deleted'));
 =======
+=======
+>>>>>>> fastadmin/master
                     $this->model->destroy($deleteIds);
                     model('AuthGroupAccess')->where('uid', 'in', $deleteIds)->delete();
                     $this->success();
                 }
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
             }
         }

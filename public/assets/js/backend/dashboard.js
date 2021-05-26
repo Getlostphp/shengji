@@ -12,6 +12,7 @@ define(['jquery', 'bootstrap', 'backend', 'addtabs', 'table', 'echarts', 'echart
                     subtext: ''
                 },
 <<<<<<< HEAD
+<<<<<<< HEAD
                 color: [
                     "#18d1b1",
                     "#3fb1e3",
@@ -22,12 +23,18 @@ define(['jquery', 'bootstrap', 'backend', 'addtabs', 'table', 'echarts', 'echart
                 ],
 =======
 >>>>>>> fastadmin/master
+=======
+>>>>>>> fastadmin/master
                 tooltip: {
                     trigger: 'axis'
                 },
                 legend: {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     data: [__('Register user')]
+=======
+                    data: [__('Sales'), __('Orders')]
+>>>>>>> fastadmin/master
 =======
                     data: [__('Sales'), __('Orders')]
 >>>>>>> fastadmin/master
@@ -43,7 +50,11 @@ define(['jquery', 'bootstrap', 'backend', 'addtabs', 'table', 'echarts', 'echart
                     type: 'category',
                     boundaryGap: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     data: Config.column
+=======
+                    data: Orderdata.column
+>>>>>>> fastadmin/master
 =======
                     data: Orderdata.column
 >>>>>>> fastadmin/master
@@ -57,7 +68,11 @@ define(['jquery', 'bootstrap', 'backend', 'addtabs', 'table', 'echarts', 'echart
                 }],
                 series: [{
 <<<<<<< HEAD
+<<<<<<< HEAD
                     name: __('Register user'),
+=======
+                    name: __('Sales'),
+>>>>>>> fastadmin/master
 =======
                     name: __('Sales'),
 >>>>>>> fastadmin/master
@@ -72,9 +87,12 @@ define(['jquery', 'bootstrap', 'backend', 'addtabs', 'table', 'echarts', 'echart
                         }
                     },
 <<<<<<< HEAD
+<<<<<<< HEAD
                     data: Config.userdata
                 }]
 =======
+=======
+>>>>>>> fastadmin/master
                     data: Orderdata.paydata
                 },
                     {
@@ -91,6 +109,9 @@ define(['jquery', 'bootstrap', 'backend', 'addtabs', 'table', 'echarts', 'echart
                         },
                         data: Orderdata.createdata
                     }]
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
             };
 
@@ -98,7 +119,10 @@ define(['jquery', 'bootstrap', 'backend', 'addtabs', 'table', 'echarts', 'echart
             myChart.setOption(option);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> fastadmin/master
             //动态添加数据，可以通过Ajax获取数据然后填充
             setInterval(function () {
                 Orderdata.column.push((new Date()).toLocaleTimeString().replace(/^\D*/, ''));
@@ -127,6 +151,9 @@ define(['jquery', 'bootstrap', 'backend', 'addtabs', 'table', 'echarts', 'echart
                         }]
                 });
             }, 2000);
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
             $(window).resize(function () {
                 myChart.resize();

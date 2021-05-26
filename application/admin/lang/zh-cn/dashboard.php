@@ -7,9 +7,15 @@ return [
     'Image'                   => '图片',
     'Total user'              => '总会员数',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Total addon'             => '总插件数',
     'Total category'          => '总分类数',
     'Total admin'             => '总管理员数',
+=======
+    'Total view'              => '总访问数',
+    'Total order'             => '总订单数',
+    'Total order amount'      => '总金额',
+>>>>>>> fastadmin/master
 =======
     'Total view'              => '总访问数',
     'Total order'             => '总订单数',
@@ -19,6 +25,7 @@ return [
     'Today user login'        => '今日登录',
     'Today order'             => '今日订单',
     'Unsettle order'          => '未处理订单',
+<<<<<<< HEAD
 <<<<<<< HEAD
     'Three dnu'               => '三日新增',
     'Seven dnu'               => '七日新增',
@@ -42,6 +49,8 @@ return [
     'Server info'             => '服务器信息',
     'PHP version'             => 'PHP版本',
 =======
+=======
+>>>>>>> fastadmin/master
     'Seven dnu'               => '七日新增',
     'Seven dau'               => '七日活跃',
     'Custom zone'             => '这里是你的自定义数据',
@@ -63,6 +72,9 @@ return [
     'Fastadmin version'       => '主框架版本',
     'Fastadmin addon version' => '插件版本',
     'Thinkphp version'        => 'ThinkPHP版本',
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
     'Sapi name'               => '运行方式',
     'Debug mode'              => '调试模式',

@@ -27,11 +27,14 @@ class AuthRule extends Model
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getMenutypeList()
     {
         return ['addtabs' => __('Addtabs'), 'dialog' => __('Dialog'), 'ajax' => __('Ajax'), 'blank' => __('Blank')];
     }
 
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
 }

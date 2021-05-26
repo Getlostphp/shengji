@@ -323,7 +323,11 @@ class Tree
                 $value = array(
                     '@childlist' => $childlist,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     '@url'       => $childdata || !isset($value['@url']) ? "javascript:;" : $value['@url'],
+=======
+                    '@url'       => $childdata || !isset($value['@url']) ? "javascript:;" : url($value['@url']),
+>>>>>>> fastadmin/master
 =======
                     '@url'       => $childdata || !isset($value['@url']) ? "javascript:;" : url($value['@url']),
 >>>>>>> fastadmin/master

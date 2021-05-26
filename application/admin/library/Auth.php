@@ -101,7 +101,11 @@ class Auth extends \fast\Auth
             }
             //token有变更
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($key != md5(md5($id) . md5($keeptime) . md5($expiretime) . $admin->token . config('token.key'))) {
+=======
+            if ($key != md5(md5($id) . md5($keeptime) . md5($expiretime) . $admin->token)) {
+>>>>>>> fastadmin/master
 =======
             if ($key != md5(md5($id) . md5($keeptime) . md5($expiretime) . $admin->token)) {
 >>>>>>> fastadmin/master
@@ -132,9 +136,15 @@ class Auth extends \fast\Auth
         if ($keeptime) {
             $expiretime = time() + $keeptime;
 <<<<<<< HEAD
+<<<<<<< HEAD
             $key = md5(md5($this->id) . md5($keeptime) . md5($expiretime) . $this->token . config('token.key'));
             $data = [$this->id, $keeptime, $expiretime, $key];
             Cookie::set('keeplogin', implode('|', $data), 86400 * 7);
+=======
+            $key = md5(md5($this->id) . md5($keeptime) . md5($expiretime) . $this->token);
+            $data = [$this->id, $keeptime, $expiretime, $key];
+            Cookie::set('keeplogin', implode('|', $data), 86400 * 30);
+>>>>>>> fastadmin/master
 =======
             $key = md5(md5($this->id) . md5($keeptime) . md5($expiretime) . $this->token);
             $data = [$this->id, $keeptime, $expiretime, $key];
@@ -303,8 +313,13 @@ class Auth extends \fast\Auth
             }
             // 取出包含自己的所有子节点
 <<<<<<< HEAD
+<<<<<<< HEAD
             $childrenList = Tree::instance()->init($groupList, 'pid')->getChildren($v['id'], true);
             $obj = Tree::instance()->init($childrenList, 'pid')->getTreeArray($v['pid']);
+=======
+            $childrenList = Tree::instance()->init($groupList)->getChildren($v['id'], true);
+            $obj = Tree::instance()->init($childrenList)->getTreeArray($v['pid']);
+>>>>>>> fastadmin/master
 =======
             $childrenList = Tree::instance()->init($groupList)->getChildren($v['id'], true);
             $obj = Tree::instance()->init($childrenList)->getTreeArray($v['pid']);
@@ -448,7 +463,11 @@ class Auth extends \fast\Auth
             }
             $v['icon'] = $v['icon'] . ' fa-fw';
 <<<<<<< HEAD
+<<<<<<< HEAD
             $v['url'] = isset($v['url']) && $v['url'] ? $v['url'] : '/' . $module . '/' . $v['name'];
+=======
+            $v['url'] = '/' . $module . '/' . $v['name'];
+>>>>>>> fastadmin/master
 =======
             $v['url'] = '/' . $module . '/' . $v['name'];
 >>>>>>> fastadmin/master
@@ -457,11 +476,16 @@ class Auth extends \fast\Auth
             $v['pinyin'] = $pinyin->permalink($v['title'], '');
             $v['title'] = __($v['title']);
 <<<<<<< HEAD
+<<<<<<< HEAD
             $v['url'] = preg_match("/^((?:[a-z]+:)?\/\/|data:image\/)(.*)/i", $v['url']) ? $v['url'] : url($v['url']);
             $v['menuclass'] = in_array($v['menutype'], ['dialog', 'ajax']) ? 'btn-' . $v['menutype'] : '';
             $v['menutabs'] = !$v['menutype'] || in_array($v['menutype'], ['default', 'addtabs']) ? 'addtabs="' . $v['id'] . '"' : '';
             $selected = $v['name'] == $fixedPage ? $v : $selected;
             $referer = $v['url'] == $refererUrl ? $v : $referer;
+=======
+            $selected = $v['name'] == $fixedPage ? $v : $selected;
+            $referer = url($v['url']) == $refererUrl ? $v : $referer;
+>>>>>>> fastadmin/master
 =======
             $selected = $v['name'] == $fixedPage ? $v : $selected;
             $referer = url($v['url']) == $refererUrl ? $v : $referer;
@@ -479,6 +503,11 @@ class Auth extends \fast\Auth
             $referer = [];
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        $selected && $selected['url'] = url($selected['url']);
+        $referer && $referer['url'] = url($referer['url']);
+>>>>>>> fastadmin/master
 =======
         $selected && $selected['url'] = url($selected['url']);
         $referer && $referer['url'] = url($referer['url']);
@@ -503,7 +532,11 @@ class Auth extends \fast\Auth
                 $childList = Tree::instance()->getTreeMenu(
                     $item['id'],
 <<<<<<< HEAD
+<<<<<<< HEAD
                     '<li class="@class" pid="@pid"><a @extend href="@url@addtabs" addtabs="@id" class="@menuclass" url="@url" py="@py" pinyin="@pinyin" title="@title"><i class="@icon"></i> <span>@title</span> <span class="pull-right-container">@caret @badge</span></a> @childlist</li>',
+=======
+                    '<li class="@class" pid="@pid"><a href="@url@addtabs" addtabs="@id" url="@url" py="@py" pinyin="@pinyin"><i class="@icon"></i> <span>@title</span> <span class="pull-right-container">@caret @badge</span></a> @childlist</li>',
+>>>>>>> fastadmin/master
 =======
                     '<li class="@class" pid="@pid"><a href="@url@addtabs" addtabs="@id" url="@url" py="@py" pinyin="@pinyin"><i class="@icon"></i> <span>@title</span> <span class="pull-right-container">@caret @badge</span></a> @childlist</li>',
 >>>>>>> fastadmin/master
@@ -514,7 +547,11 @@ class Auth extends \fast\Auth
                 );
                 $current = in_array($item['id'], $selectParentIds);
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $url = $childList ? 'javascript:;' : $item['url'];
+=======
+                $url = $childList ? 'javascript:;' : url($item['url']);
+>>>>>>> fastadmin/master
 =======
                 $url = $childList ? 'javascript:;' : url($item['url']);
 >>>>>>> fastadmin/master
@@ -525,7 +562,11 @@ class Auth extends \fast\Auth
                     $childList
                 );
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $nav .= '<li class="' . ($current ? 'active' : '') . '"><a ' . $item['extend'] . ' href="' . $url . $addtabs . '" ' . $item['menutabs'] . ' class="' . $item['menuclass'] . '" url="' . $url . '" title="' . $item['title'] . '"><i class="' . $item['icon'] . '"></i> <span>' . $item['title'] . '</span> <span class="pull-right-container"> </span></a> </li>';
+=======
+                $nav .= '<li class="' . ($current ? 'active' : '') . '"><a href="' . $url . $addtabs . '" addtabs="' . $item['id'] . '" url="' . $url . '"><i class="' . $item['icon'] . '"></i> <span>' . $item['title'] . '</span> <span class="pull-right-container"> </span></a> </li>';
+>>>>>>> fastadmin/master
 =======
                 $nav .= '<li class="' . ($current ? 'active' : '') . '"><a href="' . $url . $addtabs . '" addtabs="' . $item['id'] . '" url="' . $url . '"><i class="' . $item['icon'] . '"></i> <span>' . $item['title'] . '</span> <span class="pull-right-container"> </span></a> </li>';
 >>>>>>> fastadmin/master
@@ -537,7 +578,11 @@ class Auth extends \fast\Auth
             $menu = Tree::instance()->getTreeMenu(
                 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 '<li class="@class"><a @extend href="@url@addtabs" @menutabs class="@menuclass" url="@url" py="@py" pinyin="@pinyin" title="@title"><i class="@icon"></i> <span>@title</span> <span class="pull-right-container">@caret @badge</span></a> @childlist</li>',
+=======
+                '<li class="@class"><a href="@url@addtabs" addtabs="@id" url="@url" py="@py" pinyin="@pinyin"><i class="@icon"></i> <span>@title</span> <span class="pull-right-container">@caret @badge</span></a> @childlist</li>',
+>>>>>>> fastadmin/master
 =======
                 '<li class="@class"><a href="@url@addtabs" addtabs="@id" url="@url" py="@py" pinyin="@pinyin"><i class="@icon"></i> <span>@title</span> <span class="pull-right-container">@caret @badge</span></a> @childlist</li>',
 >>>>>>> fastadmin/master

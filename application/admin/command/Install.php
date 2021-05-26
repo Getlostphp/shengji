@@ -202,7 +202,11 @@ class Install extends Command
         // 数据库配置文件
         $dbConfigFile = APP_PATH . 'database.php';
 <<<<<<< HEAD
+<<<<<<< HEAD
         $dbConfigText = @file_get_contents($dbConfigFile);
+=======
+        $config = @file_get_contents($dbConfigFile);
+>>>>>>> fastadmin/master
 =======
         $config = @file_get_contents($dbConfigFile);
 >>>>>>> fastadmin/master
@@ -215,20 +219,27 @@ class Install extends Command
             return "'{$matches[1]}'{$matches[2]}=>{$matches[3]}Env::get('database.{$matches[1]}', '{$replace}'),";
         };
 <<<<<<< HEAD
+<<<<<<< HEAD
         $dbConfigText = preg_replace_callback("/'(hostname|database|username|password|hostport|prefix)'(\s+)=>(\s+)Env::get\((.*)\)\,/", $callback, $dbConfigText);
 
         // 检测能否成功写入数据库配置
         $result = @file_put_contents($dbConfigFile, $dbConfigText);
 =======
+=======
+>>>>>>> fastadmin/master
         $config = preg_replace_callback("/'(hostname|database|username|password|hostport|prefix)'(\s+)=>(\s+)Env::get\((.*)\)\,/", $callback, $config);
 
         // 检测能否成功写入数据库配置
         $result = @file_put_contents($dbConfigFile, $config);
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
         if (!$result) {
             throw new Exception(__('The current permissions are insufficient to write the file %s', 'application/database.php'));
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         // 设置新的Token随机密钥key
         $oldTokenKey = config('token.key');
@@ -242,6 +253,8 @@ class Install extends Command
             throw new Exception(__('The current permissions are insufficient to write the file %s', 'application/config.php'));
         }
 
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
         // 变更默认管理员密码
@@ -268,8 +281,13 @@ class Install extends Command
         if ($siteName != config('site.name')) {
             $instance->name('config')->where('name', 'name')->update(['value' => $siteName]);
 <<<<<<< HEAD
+<<<<<<< HEAD
             $siteConfigFile = CONF_PATH . 'extra' . DS . 'site.php';
             $siteConfig = include $siteConfigFile;
+=======
+            $configFile = CONF_PATH . 'extra' . DS . 'site.php';
+            $config = include $configFile;
+>>>>>>> fastadmin/master
 =======
             $configFile = CONF_PATH . 'extra' . DS . 'site.php';
             $config = include $configFile;
@@ -283,15 +301,21 @@ class Install extends Command
                     $value['value'] = (array)json_decode($value['value'], true);
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $siteConfig[$value['name']] = $value['value'];
             }
             $siteConfig['name'] = $siteName;
             file_put_contents($siteConfigFile, '<?php' . "\n\nreturn " . var_export_short($siteConfig) . ";\n");
 =======
+=======
+>>>>>>> fastadmin/master
                 $config[$value['name']] = $value['value'];
             }
             $config['name'] = $siteName;
             file_put_contents($configFile, '<?php' . "\n\nreturn " . var_export_short($config) . ";\n");
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
         }
 
@@ -321,8 +345,13 @@ class Install extends Command
         $dbConfigFile = APP_PATH . 'database.php';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (version_compare(PHP_VERSION, '7.1.0', '<')) {
             throw new Exception(__("The current version %s is too low, please use PHP 7.1 or higher", PHP_VERSION));
+=======
+        if (version_compare(PHP_VERSION, '7.0.0', '<')) {
+            throw new Exception(__("The current version %s is too low, please use PHP 7.0 or higher", PHP_VERSION));
+>>>>>>> fastadmin/master
 =======
         if (version_compare(PHP_VERSION, '7.0.0', '<')) {
             throw new Exception(__("The current version %s is too low, please use PHP 7.0 or higher", PHP_VERSION));

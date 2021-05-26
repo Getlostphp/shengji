@@ -96,9 +96,12 @@ class Api
         check_cors_request();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // 检测IP是否允许
         check_ip_allowed();
 
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
         //移除HTML标签

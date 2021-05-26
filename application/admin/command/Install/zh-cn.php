@@ -27,7 +27,11 @@ return [
     'The two passwords you entered did not match'                                                           => '两次输入的密码不一致',
     'Please input correct website'                                                                          => '网站名称输入不正确',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'The current version %s is too low, please use PHP 7.1 or higher'                                       => '当前版本%s过低，请使用PHP7.1以上版本',
+=======
+    'The current version %s is too low, please use PHP 7.0 or higher'                                       => '当前版本%s过低，请使用PHP7.0以上版本',
+>>>>>>> fastadmin/master
 =======
     'The current version %s is too low, please use PHP 7.0 or higher'                                       => '当前版本%s过低，请使用PHP7.0以上版本',
 >>>>>>> fastadmin/master

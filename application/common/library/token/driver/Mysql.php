@@ -37,6 +37,7 @@ class Mysql extends Driver
             $this->handler = \think\Db::name($this->options['table']);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         $time = time();
         $tokentime = cache('tokentime');
         if (!$tokentime || $tokentime < $time - 86400) {
@@ -45,14 +46,22 @@ class Mysql extends Driver
         }
 =======
 >>>>>>> fastadmin/master
+=======
+>>>>>>> fastadmin/master
     }
 
     /**
      * 存储Token
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string $token   Token
      * @param int    $user_id 会员ID
      * @param int    $expire  过期时长,0表示无限,单位秒
+=======
+     * @param   string $token   Token
+     * @param   int    $user_id 会员ID
+     * @param   int    $expire  过期时长,0表示无限,单位秒
+>>>>>>> fastadmin/master
 =======
      * @param   string $token   Token
      * @param   int    $user_id 会员ID
@@ -66,7 +75,11 @@ class Mysql extends Driver
         $token = $this->getEncryptedToken($token);
         $this->handler->insert(['token' => $token, 'user_id' => $user_id, 'createtime' => time(), 'expiretime' => $expiretime]);
 <<<<<<< HEAD
+<<<<<<< HEAD
         return true;
+=======
+        return TRUE;
+>>>>>>> fastadmin/master
 =======
         return TRUE;
 >>>>>>> fastadmin/master
@@ -75,7 +88,11 @@ class Mysql extends Driver
     /**
      * 获取Token内的信息
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string $token
+=======
+     * @param   string $token
+>>>>>>> fastadmin/master
 =======
      * @param   string $token
 >>>>>>> fastadmin/master
@@ -101,8 +118,13 @@ class Mysql extends Driver
     /**
      * 判断Token是否可用
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string $token   Token
      * @param int    $user_id 会员ID
+=======
+     * @param   string $token   Token
+     * @param   int    $user_id 会员ID
+>>>>>>> fastadmin/master
 =======
      * @param   string $token   Token
      * @param   int    $user_id 会员ID
@@ -118,7 +140,11 @@ class Mysql extends Driver
     /**
      * 删除Token
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param string $token
+=======
+     * @param   string $token
+>>>>>>> fastadmin/master
 =======
      * @param   string $token
 >>>>>>> fastadmin/master
@@ -133,7 +159,11 @@ class Mysql extends Driver
     /**
      * 删除指定用户的所有Token
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param int $user_id
+=======
+     * @param   int $user_id
+>>>>>>> fastadmin/master
 =======
      * @param   int $user_id
 >>>>>>> fastadmin/master

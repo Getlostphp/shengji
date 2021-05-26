@@ -74,7 +74,11 @@ define(['jquery', 'bootstrap', 'backend', 'addtabs', 'adminlte', 'form'], functi
 
             //清除缓存
 <<<<<<< HEAD
+<<<<<<< HEAD
             $(document).on('click', "ul.wipecache li a,a.wipecache", function () {
+=======
+            $(document).on('click', "ul.wipecache li a", function () {
+>>>>>>> fastadmin/master
 =======
             $(document).on('click', "ul.wipecache li a", function () {
 >>>>>>> fastadmin/master

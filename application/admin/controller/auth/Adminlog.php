@@ -28,7 +28,11 @@ class Adminlog extends Backend
 
         $this->childrenAdminIds = $this->auth->getChildrenAdminIds(true);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->childrenGroupIds = $this->auth->getChildrenGroupIds(true);
+=======
+        $this->childrenGroupIds = $this->auth->getChildrenGroupIds($this->auth->isSuperAdmin() ? true : false);
+>>>>>>> fastadmin/master
 =======
         $this->childrenGroupIds = $this->auth->getChildrenGroupIds($this->auth->isSuperAdmin() ? true : false);
 >>>>>>> fastadmin/master
@@ -71,9 +75,12 @@ class Adminlog extends Backend
             $this->error(__('No Results were found'));
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!$row['admin_id'] || !in_array($row['admin_id'], $this->childrenAdminIds)) {
             $this->error(__('You have no permission'));
         }
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
         $this->view->assign("row", $row->toArray());
@@ -109,12 +116,18 @@ class Adminlog extends Backend
         $ids = $ids ? $ids : $this->request->post("ids");
         if ($ids) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $adminList = $this->model->where('id', 'in', $ids)->where('admin_id', 'in', $this->childrenAdminIds)->select();
 =======
+=======
+>>>>>>> fastadmin/master
             $childrenGroupIds = $this->childrenGroupIds;
             $adminList = $this->model->where('id', 'in', $ids)->where('admin_id', 'in', function ($query) use ($childrenGroupIds) {
                 $query->name('auth_group_access')->field('uid');
             })->select();
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
             if ($adminList) {
                 $deleteIds = [];

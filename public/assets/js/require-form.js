@@ -326,7 +326,11 @@ define(['jquery', 'bootstrap', 'upload', 'validator', 'validator-lang'], functio
                         $(".fieldlist", form).on("click", ".btn-append,.append", function (e, row) {
                             var container = $(this).closest(".fieldlist");
 <<<<<<< HEAD
+<<<<<<< HEAD
                             var tagName = container.data("tag") || (container.is("table") ? "tr" : "dd");
+=======
+                            var tagName = container.data("tag") || "dd";
+>>>>>>> fastadmin/master
 =======
                             var tagName = container.data("tag") || "dd";
 >>>>>>> fastadmin/master
@@ -340,7 +344,11 @@ define(['jquery', 'bootstrap', 'upload', 'validator', 'validator-lang'], functio
                             var vars = {index: index, name: name, data: data, row: row};
                             var html = template ? Template(template, vars) : Template.render(Form.config.fieldlisttpl, vars);
 <<<<<<< HEAD
+<<<<<<< HEAD
                             $(html).attr("fieldlist-item", true).insertBefore($(tagName + ":last", container));
+=======
+                            $(html).insertBefore($(tagName + ":last", container));
+>>>>>>> fastadmin/master
 =======
                             $(html).insertBefore($(tagName + ":last", container));
 >>>>>>> fastadmin/master
@@ -350,7 +358,11 @@ define(['jquery', 'bootstrap', 'upload', 'validator', 'validator-lang'], functio
                         $(".fieldlist", form).on("click", ".btn-remove", function () {
                             var container = $(this).closest(".fieldlist");
 <<<<<<< HEAD
+<<<<<<< HEAD
                             var tagName = container.data("tag") || (container.is("table") ? "tr" : "dd");
+=======
+                            var tagName = container.data("tag") || "dd";
+>>>>>>> fastadmin/master
 =======
                             var tagName = container.data("tag") || "dd";
 >>>>>>> fastadmin/master
@@ -361,7 +373,11 @@ define(['jquery', 'bootstrap', 'upload', 'validator', 'validator-lang'], functio
                         $(".fieldlist", form).each(function () {
                             var container = this;
 <<<<<<< HEAD
+<<<<<<< HEAD
                             var tagName = $(this).data("tag") || ($(this).is("table") ? "tr" : "dd");
+=======
+                            var tagName = $(this).data("tag") || "dd";
+>>>>>>> fastadmin/master
 =======
                             var tagName = $(this).data("tag") || "dd";
 >>>>>>> fastadmin/master
@@ -379,6 +395,7 @@ define(['jquery', 'bootstrap', 'upload', 'validator', 'validator-lang'], functio
                             }
                             var template = $(this).data("template");
 <<<<<<< HEAD
+<<<<<<< HEAD
                             textarea.on("fa.event.refreshfieldlist", function () {
                                 $("[fieldlist-item]", container).remove();
                                 var json = {};
@@ -394,6 +411,8 @@ define(['jquery', 'bootstrap', 'upload', 'validator', 'validator-lang'], functio
                             });
                             textarea.trigger("fa.event.refreshfieldlist");
 =======
+=======
+>>>>>>> fastadmin/master
                             var json = {};
                             try {
                                 json = JSON.parse(textarea.val());
@@ -405,6 +424,9 @@ define(['jquery', 'bootstrap', 'upload', 'validator', 'validator-lang'], functio
                                     value: j
                                 });
                             });
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
                         });
                     });

@@ -10,6 +10,7 @@ return [
     'Controller/Action'                                         => '控制器名/方法名',
     'Ismenu'                                                    => '菜单',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Menutype'                                                  => '菜单类型',
     'Addtabs'                                                   => '选项卡(默认)',
     'Dialog'                                                    => '弹窗',
@@ -18,16 +19,23 @@ return [
     'Extend'                                                    => '扩展属性',
 =======
 >>>>>>> fastadmin/master
+=======
+>>>>>>> fastadmin/master
     'Search icon'                                               => '搜索图标',
     'Toggle menu visible'                                       => '点击切换菜单显示',
     'Toggle sub menu'                                           => '点击切换子菜单',
     'Menu tips'                                                 => '父级菜单无需匹配控制器和方法,子级菜单请使用控制器名',
     'Node tips'                                                 => '控制器/方法名,如果有目录请使用 目录名/控制器名/方法名',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Url tips'                                                  => '一般情况下留空即可,如果是外部链接或相对链接请输入',
     'The non-menu rule must have parent'                        => '非菜单规则节点必须有父级',
     'Can not change the parent to child'                        => '父级不能是它的子级',
     'Can not change the parent to self'                         => '父级不能是它自己',
+=======
+    'The non-menu rule must have parent'                        => '非菜单规则节点必须有父级',
+    'Can not change the parent to child'                        => '父组别不能是它的子组别',
+>>>>>>> fastadmin/master
 =======
     'The non-menu rule must have parent'                        => '非菜单规则节点必须有父级',
     'Can not change the parent to child'                        => '父组别不能是它的子组别',

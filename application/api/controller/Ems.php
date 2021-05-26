@@ -37,8 +37,13 @@ class Ems extends Api
     public function send()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $email = $this->request->post("email");
         $event = $this->request->post("event");
+=======
+        $email = $this->request->request("email");
+        $event = $this->request->request("event");
+>>>>>>> fastadmin/master
 =======
         $email = $this->request->request("email");
         $event = $this->request->request("event");
@@ -80,15 +85,21 @@ class Ems extends Api
     public function check()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $email = $this->request->post("email");
         $event = $this->request->post("event");
         $event = $event ? $event : 'register';
         $captcha = $this->request->post("captcha");
 =======
+=======
+>>>>>>> fastadmin/master
         $email = $this->request->request("email");
         $event = $this->request->request("event");
         $event = $event ? $event : 'register';
         $captcha = $this->request->request("captcha");
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
 
         if ($event) {

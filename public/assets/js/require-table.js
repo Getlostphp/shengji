@@ -49,7 +49,10 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
             checkOnInit: true, //是否在初始化时判断
             escape: true, //是否对内容进行转义
 <<<<<<< HEAD
+<<<<<<< HEAD
             fixDropdownPosition: true, //是否修复下拉的定位
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
             selectedIds: [],
@@ -258,9 +261,14 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                 // 处理选中筛选框后按钮的状态统一变更
                 table.on('check.bs.table uncheck.bs.table check-all.bs.table uncheck-all.bs.table post-body.bs.table', function (e) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     var allIds = [];
                     $.each(table.bootstrapTable("getData"), function (i, item) {
                         allIds.push(typeof item[options.pk] != 'undefined' ? item[options.pk] : '');
+=======
+                    var allIds = table.bootstrapTable("getData").map(function (item) {
+                        return item[options.pk];
+>>>>>>> fastadmin/master
 =======
                     var allIds = table.bootstrapTable("getData").map(function (item) {
                         return item[options.pk];
@@ -318,7 +326,11 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                         url = Table.api.replaceurl(url, {ids: ids.length > 0 ? ids.join(",") : 0}, table);
                     }
 <<<<<<< HEAD
+<<<<<<< HEAD
                     Fast.api.open(url, $(this).data("original-title") || $(this).attr("title") || __('Add'), $(this).data() || {});
+=======
+                    Fast.api.open(url, __('Add'), $(this).data() || {});
+>>>>>>> fastadmin/master
 =======
                     Fast.api.open(url, __('Add'), $(this).data() || {});
 >>>>>>> fastadmin/master
@@ -345,9 +357,12 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                         return;
                     }
 <<<<<<< HEAD
+<<<<<<< HEAD
                     var title = $(that).data('title') || $(that).attr("title") || __('Edit');
                     var data = $(that).data() || {};
                     delete data.title;
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
                     //循环弹出多个编辑框
@@ -356,7 +371,11 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                         row = $.extend({}, row ? row : {}, {ids: row[options.pk]});
                         url = Table.api.replaceurl(url, row, table);
 <<<<<<< HEAD
+<<<<<<< HEAD
                         Fast.api.open(url, typeof title === 'function' ? title.call(table, row) : title, data);
+=======
+                        Fast.api.open(url, __('Edit'), $(that).data() || {});
+>>>>>>> fastadmin/master
 =======
                         Fast.api.open(url, __('Edit'), $(that).data() || {});
 >>>>>>> fastadmin/master
@@ -497,7 +516,11 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                     row.ids = ids;
                     var url = Table.api.replaceurl(options.extend.edit_url, row, table);
 <<<<<<< HEAD
+<<<<<<< HEAD
                     Fast.api.open(url, $(this).data("original-title") || $(this).attr("title") || __('Edit'), $(this).data() || {});
+=======
+                    Fast.api.open(url, __('Edit'), $(this).data() || {});
+>>>>>>> fastadmin/master
 =======
                     Fast.api.open(url, __('Edit'), $(this).data() || {});
 >>>>>>> fastadmin/master
@@ -515,6 +538,7 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                         }
                     );
                 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 //修复dropdown定位溢出的情况
@@ -555,6 +579,8 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                     });
                 }
 
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
                 var id = table.attr("id");
@@ -599,7 +625,11 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                         row = $.extend({}, row ? row : {}, {ids: ids});
                         var url = options.extend.edit_url;
 <<<<<<< HEAD
+<<<<<<< HEAD
                         Fast.api.open(Table.api.replaceurl(url, row, table), $(this).data("original-title") || $(this).attr("title") || __('Edit'), $(this).data() || {});
+=======
+                        Fast.api.open(Table.api.replaceurl(url, row, table), __('Edit'), $(this).data() || {});
+>>>>>>> fastadmin/master
 =======
                         Fast.api.open(Table.api.replaceurl(url, row, table), __('Edit'), $(this).data() || {});
 >>>>>>> fastadmin/master
@@ -632,9 +662,14 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                     'click .img-center': function (e, value, row, index) {
                         var data = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
                         value = value === null ? '' : value.toString();
                         var arr = value != '' ? value.split(",") : [];
                         $.each(arr, function (index, value) {
+=======
+                        value = value.toString().split(",");
+                        $.each(value, function (index, value) {
+>>>>>>> fastadmin/master
 =======
                         value = value.toString().split(",");
                         $.each(value, function (index, value) {
@@ -657,6 +692,11 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
             formatter: {
                 icon: function (value, row, index) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                    if (!value)
+                        return '';
+>>>>>>> fastadmin/master
 =======
                     if (!value)
                         return '';
@@ -668,7 +708,10 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                 },
                 image: function (value, row, index) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     value = value == null || value.length === 0 ? '' : value.toString();
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
                     value = value ? value : '/assets/img/blank.gif';
@@ -677,9 +720,15 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                 },
                 images: function (value, row, index) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     value = value == null || value.length === 0 ? '' : value.toString();
                     var classname = typeof this.classname !== 'undefined' ? this.classname : 'img-sm img-center';
                     var arr = value != '' ? value.split(',') : [];
+=======
+                    value = value === null ? '' : value.toString();
+                    var classname = typeof this.classname !== 'undefined' ? this.classname : 'img-sm img-center';
+                    var arr = value.split(',');
+>>>>>>> fastadmin/master
 =======
                     value = value === null ? '' : value.toString();
                     var classname = typeof this.classname !== 'undefined' ? this.classname : 'img-sm img-center';
@@ -712,7 +761,11 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                         custom = $.extend(custom, this.custom);
                     }
 <<<<<<< HEAD
+<<<<<<< HEAD
                     value = value == null || value.length === 0 ? '' : value.toString();
+=======
+                    value = value === null ? '' : value.toString();
+>>>>>>> fastadmin/master
 =======
                     value = value === null ? '' : value.toString();
 >>>>>>> fastadmin/master
@@ -754,7 +807,11 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                 },
                 url: function (value, row, index) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     value = value == null || value.length === 0 ? '' : value.toString();
+=======
+                    value = value === null ? '' : value.toString();
+>>>>>>> fastadmin/master
 =======
                     value = value === null ? '' : value.toString();
 >>>>>>> fastadmin/master
@@ -770,7 +827,11 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                 },
                 addtabs: function (value, row, index) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     var url = Table.api.replaceurl(this.url || '', row, this.table);
+=======
+                    var url = Table.api.replaceurl(this.url, row, this.table);
+>>>>>>> fastadmin/master
 =======
                     var url = Table.api.replaceurl(this.url, row, this.table);
 >>>>>>> fastadmin/master
@@ -779,7 +840,11 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                 },
                 dialog: function (value, row, index) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     var url = Table.api.replaceurl(this.url || '', row, this.table);
+=======
+                    var url = Table.api.replaceurl(this.url, row, this.table);
+>>>>>>> fastadmin/master
 =======
                     var url = Table.api.replaceurl(this.url, row, this.table);
 >>>>>>> fastadmin/master
@@ -789,7 +854,11 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                 flag: function (value, row, index) {
                     var that = this;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     value = value == null || value.length === 0 ? '' : value.toString();
+=======
+                    value = value === null ? '' : value.toString();
+>>>>>>> fastadmin/master
 =======
                     value = value === null ? '' : value.toString();
 >>>>>>> fastadmin/master
@@ -807,15 +876,21 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                     //渲染Flag
                     var html = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
                     var arr = value != '' ? value.split(',') : [];
                     var color, display, label;
                     $.each(arr, function (i, value) {
                         value = value == null || value.length === 0 ? '' : value.toString();
 =======
+=======
+>>>>>>> fastadmin/master
                     var arr = value.split(',');
                     var color, display, label;
                     $.each(arr, function (i, value) {
                         value = value === null ? '' : value.toString();
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
                         if (value == '')
                             return true;
@@ -930,7 +1005,11 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                     var dropdownHtml = [];
                     $.each(dropdowns, function (i, j) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                         dropdownHtml.push('<div class="btn-group"><button type="button" class="btn btn-primary dropdown-toggle btn-xs" data-toggle="dropdown">' + i + '</button><button type="button" class="btn btn-primary dropdown-toggle btn-xs" data-toggle="dropdown"><span class="caret"></span></button><ul class="dropdown-menu dropdown-menu-right"><li>' + j.join('</li><li>') + '</li></ul></div>');
+=======
+                        dropdownHtml.push('<div class="btn-group"><button type="button" class="btn btn-primary dropdown-toggle btn-xs" data-toggle="dropdown">' + i + '</button><button type="button" class="btn btn-primary dropdown-toggle btn-xs" data-toggle="dropdown"><span class="caret"></span></button><ul class="dropdown-menu pull-right"><li>' + j.join('</li><li>') + '</li></ul></div>');
+>>>>>>> fastadmin/master
 =======
                         dropdownHtml.push('<div class="btn-group"><button type="button" class="btn btn-primary dropdown-toggle btn-xs" data-toggle="dropdown">' + i + '</button><button type="button" class="btn btn-primary dropdown-toggle btn-xs" data-toggle="dropdown"><span class="caret"></span></button><ul class="dropdown-menu pull-right"><li>' + j.join('</li><li>') + '</li></ul></div>');
 >>>>>>> fastadmin/master
@@ -945,7 +1024,10 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                 var ids = options ? row[options.pk] : 0;
                 row.ids = ids ? ids : (typeof row.ids !== 'undefined' ? row.ids : 0);
 <<<<<<< HEAD
+<<<<<<< HEAD
                 url = url == null || url.length === 0 ? '' : url.toString();
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
                 //自动添加ids参数

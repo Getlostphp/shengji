@@ -100,7 +100,11 @@ class Config extends Backend
                 if ($result !== false) {
                     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
                         ConfigModel::refreshFile();
+=======
+                        $this->refreshFile();
+>>>>>>> fastadmin/master
 =======
                         $this->refreshFile();
 >>>>>>> fastadmin/master
@@ -147,7 +151,11 @@ class Config extends Backend
                 }
                 try {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     ConfigModel::refreshFile();
+=======
+                    $this->refreshFile();
+>>>>>>> fastadmin/master
 =======
                     $this->refreshFile();
 >>>>>>> fastadmin/master
@@ -172,7 +180,11 @@ class Config extends Backend
             try {
                 $config->delete();
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ConfigModel::refreshFile();
+=======
+                $this->refreshFile();
+>>>>>>> fastadmin/master
 =======
                 $this->refreshFile();
 >>>>>>> fastadmin/master
@@ -187,7 +199,10 @@ class Config extends Backend
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> fastadmin/master
      * 刷新配置文件
      */
     protected function refreshFile()
@@ -210,6 +225,9 @@ class Config extends Backend
     }
 
     /**
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
      * 检测配置项是否存在
      * @internal
@@ -272,8 +290,13 @@ class Config extends Backend
             $result = $email
                 ->to($receiver)
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ->subject(__("This is a test mail", config('site.name')))
                 ->message('<div style="min-height:550px; padding: 100px 55px 200px;">' . __('This is a test mail content', config('site.name')) . '</div>')
+=======
+                ->subject(__("This is a test mail"))
+                ->message('<div style="min-height:550px; padding: 100px 55px 200px;">' . __('This is a test mail content') . '</div>')
+>>>>>>> fastadmin/master
 =======
                 ->subject(__("This is a test mail"))
                 ->message('<div style="min-height:550px; padding: 100px 55px 200px;">' . __('This is a test mail content') . '</div>')

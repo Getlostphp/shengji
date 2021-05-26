@@ -142,7 +142,11 @@ define(['jquery', 'bootstrap', 'dropzone', 'template'], function ($, undefined, 
                         url = url ? url : Config.upload.uploadurl;
                         url = Fast.api.fixurl(url);
 <<<<<<< HEAD
+<<<<<<< HEAD
                         var chunking = false, chunkSize = Config.upload.chunksize || 2097152, timeout = Config.upload.timeout || 600000;
+=======
+                        var chunking = false, chunkSize = Config.upload.chunksize || 2097152;
+>>>>>>> fastadmin/master
 =======
                         var chunking = false, chunkSize = Config.upload.chunksize || 2097152;
 >>>>>>> fastadmin/master
@@ -203,8 +207,11 @@ define(['jquery', 'bootstrap', 'dropzone', 'template'], function ($, undefined, 
                             acceptedFiles: mimetype,
                             maxFiles: (maxcount && parseInt(maxcount) > 1 ? maxcount : (multiple ? null : 1)),
 <<<<<<< HEAD
+<<<<<<< HEAD
                             timeout: timeout,
                             parallelUploads: 1,
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
                             previewsContainer: false,
@@ -253,7 +260,11 @@ define(['jquery', 'bootstrap', 'dropzone', 'template'], function ($, undefined, 
                             },
                             error: function (file, response, xhr) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 var responseObj = $("<div>" + (xhr && typeof xhr.responseText !== 'undefined' ? xhr.responseText : response) + "</div>");
+=======
+                                var responseObj = $("<div>" + xhr.responseText + "</div>");
+>>>>>>> fastadmin/master
 =======
                                 var responseObj = $("<div>" + xhr.responseText + "</div>");
 >>>>>>> fastadmin/master
@@ -357,6 +368,7 @@ define(['jquery', 'bootstrap', 'dropzone', 'template'], function ($, undefined, 
                                     var suffix = /[\.]?([a-zA-Z0-9]+)$/.exec(j);
                                     suffix = suffix ? suffix[1] : 'file';
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     var value = (json && typeof json[i] !== 'undefined' ? json[i] : null);
                                     var data = {url: j, fullurl: Fast.api.cdnurl(j), data: $(that).data(), key: i, index: i, value: value, row: value, suffix: suffix};
                                     var html = tpl ? Template(tpl, data) : Template.render(Upload.config.previewtpl, data);
@@ -364,10 +376,15 @@ define(['jquery', 'bootstrap', 'dropzone', 'template'], function ($, undefined, 
                                 });
                                 refresh($("#" + preview_id).data("name"));
 =======
+=======
+>>>>>>> fastadmin/master
                                     var data = {url: j, fullurl: Fast.api.cdnurl(j), data: $(that).data(), key: i, index: i, value: (json && typeof json[i] !== 'undefined' ? json[i] : null), suffix: suffix};
                                     var html = tpl ? Template(tpl, data) : Template.render(Upload.config.previewtpl, data);
                                     $("#" + preview_id).append(html);
                                 });
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
                             });
                             $("#" + input_id).trigger("change");

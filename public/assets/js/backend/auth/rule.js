@@ -56,6 +56,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'template'], function
                 search: false,
                 commonSearch: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 rowAttributes: function (row, index) {
                     if (this.totalRows > 500) {
                         return row.pid == 0 ? {} : {style: "display:none"};
@@ -64,11 +65,14 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'template'], function
                 }
 =======
 >>>>>>> fastadmin/master
+=======
+>>>>>>> fastadmin/master
             });
 
             // 为表格绑定事件
             Table.api.bindevent(table);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             var btnSuccessEvent = function (data, ret) {
                 if ($(this).hasClass("btn-change")) {
@@ -91,19 +95,25 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'template'], function
 
 =======
 >>>>>>> fastadmin/master
+=======
+>>>>>>> fastadmin/master
             //表格内容渲染前
             table.on('pre-body.bs.table', function (e, data) {
                 var options = table.bootstrapTable("getOptions");
                 options.escape = true;
             });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
             //当内容渲染完成后
             table.on('post-body.bs.table', function (e, data) {
                 var options = table.bootstrapTable("getOptions");
                 options.escape = false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 //点击切换/排序/删除操作后刷新左侧菜单
@@ -122,6 +132,8 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'template'], function
             });
 
 =======
+=======
+>>>>>>> fastadmin/master
                 //默认隐藏所有子节点
                 //$("a.btn[data-id][data-pid][data-pid!=0]").closest("tr").hide();
                 $(".btn-node-sub.disabled").closest("tr").hide();
@@ -156,13 +168,19 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'template'], function
                 });
 
             });
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
             //批量删除后的回调
             $(".toolbar > .btn-del,.toolbar .btn-more~ul>li>a").data("success", function (e) {
                 Fast.api.refreshmenu();
             });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
             //展开隐藏一级
@@ -176,7 +194,10 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'template'], function
                 $(".btn-node-sub[data-pid=0]").data("shown", show);
             });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
             //展开隐藏全部
@@ -216,9 +237,13 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'template'], function
                 $(document).on('click', "input[name='row[ismenu]']", function () {
                     var name = $("input[name='row[name]']");
 <<<<<<< HEAD
+<<<<<<< HEAD
                     var ismenu = $(this).val() == 1;
                     name.prop("placeholder", ismenu ? name.data("placeholder-menu") : name.data("placeholder-node"));
                     $('div[data-type="menu"]').toggleClass("hidden", !ismenu);
+=======
+                    name.prop("placeholder", $(this).val() == 1 ? name.data("placeholder-menu") : name.data("placeholder-node"));
+>>>>>>> fastadmin/master
 =======
                     name.prop("placeholder", $(this).val() == 1 ? name.data("placeholder-menu") : name.data("placeholder-node"));
 >>>>>>> fastadmin/master

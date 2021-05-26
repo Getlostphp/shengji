@@ -6,7 +6,11 @@ return [
     'Group not found'                                                      => '组别未找到',
     'Can not change the parent to child'                                   => '父组别不能是它的子组别',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Can not change the parent to self'                                    => '父组别不能是它自己',
+=======
+    'Can not change the parent to self'                                    => '父组别不能是它的子组别',
+>>>>>>> fastadmin/master
 =======
     'Can not change the parent to self'                                    => '父组别不能是它的子组别',
 >>>>>>> fastadmin/master

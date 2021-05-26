@@ -25,7 +25,10 @@ class Group extends Backend
     protected $childrenGroupIds = [];
     //当前组别列表数据
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected $grouplist = [];
+=======
+>>>>>>> fastadmin/master
 =======
 >>>>>>> fastadmin/master
     protected $groupdata = [];
@@ -42,6 +45,7 @@ class Group extends Backend
         $groupList = collection(AuthGroup::where('id', 'in', $this->childrenGroupIds)->select())->toArray();
 
         Tree::instance()->init($groupList);
+<<<<<<< HEAD
 <<<<<<< HEAD
         $groupList = [];
         if ($this->auth->isSuperAdmin()) {
@@ -66,6 +70,8 @@ class Group extends Backend
 
         $this->grouplist = $groupList;
 =======
+=======
+>>>>>>> fastadmin/master
         $result = [];
         if ($this->auth->isSuperAdmin()) {
             $result = Tree::instance()->getTreeList(Tree::instance()->getTreeArray(0));
@@ -80,6 +86,9 @@ class Group extends Backend
             $groupName[$v['id']] = $v['name'];
         }
 
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
         $this->groupdata = $groupName;
         $this->assignconfig("admin", ['id' => $this->auth->id, 'group_ids' => $this->auth->getGroupIds()]);
@@ -94,8 +103,11 @@ class Group extends Backend
     {
         if ($this->request->isAjax()) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $list = $this->grouplist;
 =======
+=======
+>>>>>>> fastadmin/master
             $list = AuthGroup::all(array_keys($this->groupdata));
             $list = collection($list)->toArray();
             $groupList = [];
@@ -109,6 +121,9 @@ class Group extends Backend
                     $list[] = $groupList[$k];
                 }
             }
+<<<<<<< HEAD
+>>>>>>> fastadmin/master
+=======
 >>>>>>> fastadmin/master
             $total = count($list);
             $result = array("total" => $total, "rows" => $list);
