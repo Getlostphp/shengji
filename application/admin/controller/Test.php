@@ -41,6 +41,6 @@ class Test extends Backend
 
     public function index()
     {
-        echo 'index';
+        echo 'index123';
     }
 }
